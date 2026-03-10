@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookie Policy — Pixelskits | How We Use Cookies</title>
+<meta name="description" content="Pixelskits Cookie Policy. We use Google AdSense and optionally Google Fonts. Your files are never processed server-side. Full GDPR-compliant cookie disclosure.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://pixelskits.site/cookies.html">
+<meta property="og:title" content="Cookie Policy — Pixelskits">
+<meta property="og:description" content="Full disclosure of every cookie used on Pixelskits. Google AdSense for ads, Google Fonts optionally. GDPR compliant.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pixelskits.site/cookies.html">
+<meta name="theme-color" content="#FF4D1C">
+<style>
+:root{
+  --ink:#04060F;--ink2:#060810;--ink3:#0B0E1C;
+  --card:rgba(8,10,22,0.96);
+  --line:rgba(255,255,255,.06);--line2:rgba(255,255,255,.12);--line3:rgba(255,255,255,.24);
+  --snow:#EDF0FF;--snow2:#8890C0;--snow3:#454870;
+  --cyan:#0CE4FA;--cyan2:#5EF2FF;--cyanG:rgba(12,228,250,.18);
+  --orange:#FF4D1C;--orange2:#FF7A45;--orangeG:rgba(255,77,28,.16);
+  --violet:#7B5FEB;--rose:#FF2060;
+  --ease:.4s cubic-bezier(.25,.46,.45,.94);--fast:.2s cubic-bezier(.25,.46,.45,.94);
+  --ff-sans:'Bricolage Grotesque','Inter','Segoe UI',system-ui,sans-serif;
+  --ff-serif:'Playfair Display',Georgia,'Times New Roman',serif;
+}
+[data-theme=light]{
+  --ink:#C8CCE8;--ink2:#BCC2E2;--ink3:#AEB4D8;
+  --card:rgba(185,192,235,.92);
+  --line:rgba(0,0,0,.10);--line2:rgba(0,0,0,.18);--line3:rgba(0,0,0,.32);
+  --snow:#02040E;--snow2:#1C2050;--snow3:#505490;
+  --cyan:#0782A0;--cyan2:#059BBD;--cyanG:rgba(7,130,160,.16);
+  --orange:#B82800;--orange2:#D04810;--orangeG:rgba(184,40,0,.12);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;background:var(--ink);}
+body{font-family:var(--ff-sans);background:var(--ink);color:var(--snow);overflow-x:hidden;transition:background var(--ease),color var(--ease);min-height:100vh;}
+@media(pointer:fine){body{cursor:none;}}
+a{text-decoration:none;color:inherit;}
+button{font-family:inherit;}
+img{display:block;max-width:100%;}
+#cd,#cr{display:none;}
+@media(pointer:fine){
+  #cd{display:block;width:7px;height:7px;background:var(--cyan);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9997;transform:translate(-50%,-50%);}
+  #cr{display:block;width:36px;height:36px;border:1.5px solid rgba(12,228,250,.4);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9996;transform:translate(-50%,-50%);transition:width .25s,height .25s,border-color .25s,background .25s;}
+  body.ch #cr{width:52px;height:52px;border-color:var(--cyan);background:rgba(12,228,250,.06);}
+}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px;}
+.ambient{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);animation:drift 24s ease-in-out infinite;}
+.oa{width:650px;height:650px;background:radial-gradient(circle,rgba(12,228,250,.06),transparent 65%);top:-160px;left:-140px;}
+.ob{width:500px;height:500px;background:radial-gradient(circle,rgba(255,77,28,.07),transparent 65%);bottom:-80px;right:-80px;animation-delay:-9s;animation-duration:30s;}
+.oc{width:380px;height:380px;background:radial-gradient(circle,rgba(123,95,235,.06),transparent 65%);top:42%;left:44%;animation-delay:-18s;animation-duration:22s;}
+@keyframes drift{0%,100%{transform:translate(0,0) scale(1);}33%{transform:translate(60px,-50px) scale(1.07);}66%{transform:translate(-40px,60px) scale(.94);}}
+
+/* HEADER */
+header{position:fixed;top:0;left:0;right:0;z-index:510;height:68px;display:flex;align-items:center;padding:0 48px;backdrop-filter:blur(24px) saturate(160%);background:rgba(4,6,15,.8);border-bottom:1px solid var(--line);transition:background var(--ease);}
+@media(max-width:768px){header{padding:0 20px;}}
+[data-theme=light] header{background:rgba(243,244,252,.88);}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--ff-serif);font-size:1.32rem;font-weight:700;letter-spacing:.01em;flex-shrink:0;}
+.logo-mark{width:40px;height:40px;flex-shrink:0;transition:transform .4s ease;}
+.logo:hover .logo-mark{transform:rotate(-8deg) scale(1.08);}
+.hdr-right{margin-left:auto;display:flex;align-items:center;gap:10px;}
+.theme-btn{width:40px;height:40px;border-radius:10px;border:1px solid var(--line2);background:transparent;color:var(--snow2);display:flex;align-items:center;justify-content:center;transition:all var(--fast);cursor:pointer;}
+.theme-btn:hover{border-color:var(--cyan);color:var(--cyan);}
+.back-btn{display:flex;align-items:center;gap:7px;padding:9px 16px;border-radius:10px;border:1px solid var(--line2);background:transparent;color:var(--snow2);font-size:.82rem;font-weight:600;transition:all var(--fast);}
+.back-btn:hover{border-color:var(--cyan);color:var(--cyan);}
+
+/* HERO */
+.hero{position:relative;padding-top:68px;height:520px;overflow:hidden;display:flex;align-items:flex-end;}
+.hero-bg{position:absolute;inset:0;z-index:0;}
+.hero-bg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 8s ease;}
+.hero:hover .hero-bg img{transform:scale(1.04);}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(4,6,15,.2) 0%,rgba(4,6,15,.0) 30%,rgba(4,6,15,.97) 100%);}
+.hero-bg::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(123,95,235,.1) 0%,transparent 55%);z-index:1;}
+.hero-content{position:relative;z-index:2;padding:0 48px 56px;width:100%;}
+@media(max-width:768px){.hero-content{padding:0 20px 40px;}}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;padding:5px 13px 5px 9px;border-radius:50px;background:rgba(123,95,235,.12);border:1px solid rgba(123,95,235,.25);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--violet);margin-bottom:20px;}
+.hero-eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--violet);animation:pulse 2s ease infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(.65);}}
+.hero-h{font-family:var(--ff-serif);font-size:clamp(2.8rem,5.5vw,4.8rem);font-weight:900;line-height:1.02;letter-spacing:-.04em;color:var(--snow);max-width:700px;}
+.hero-h span{background:linear-gradient(135deg,var(--violet),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-meta{display:flex;align-items:center;gap:22px;margin-top:18px;flex-wrap:wrap;}
+.hero-meta-item{display:flex;align-items:center;gap:7px;font-size:.79rem;color:rgba(237,240,255,.55);}
+.hero-meta-item svg{color:var(--cyan);opacity:.8;}
+
+/* LAYOUT */
+.page-wrap{position:relative;z-index:2;max-width:1140px;margin:0 auto;padding:0 48px 100px;display:grid;grid-template-columns:228px 1fr;gap:64px;align-items:start;}
+@media(max-width:920px){.page-wrap{grid-template-columns:1fr;padding:0 20px 80px;gap:0;display:flex;flex-direction:column;}}
+.sidebar{position:sticky;top:88px;padding-top:52px;}
+@media(max-width:920px){.sidebar{display:none;}}
+.content{flex:1;}
+.sidebar-label{font-size:.61rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--snow3);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.sidebar-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--line2),transparent);}
+.sidebar-nav{display:flex;flex-direction:column;gap:1px;}
+.sn-link{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;font-size:.79rem;color:var(--snow2);transition:all .18s;border:1px solid transparent;background:transparent;width:100%;text-align:left;text-decoration:none;}
+.sn-link svg{flex-shrink:0;opacity:.65;}
+.sn-link:hover{background:rgba(12,228,250,.06);border-color:rgba(12,228,250,.14);color:var(--cyan);}
+.sn-link:hover svg{opacity:1;}
+.sn-link.active{background:rgba(12,228,250,.08);border-color:rgba(12,228,250,.2);color:var(--cyan);}
+.sidebar-divider{height:1px;background:var(--line2);margin:18px 0;}
+.sb-badge{display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:10px;background:rgba(0,230,130,.05);border:1px solid rgba(0,230,130,.14);font-size:.74rem;color:rgba(0,230,130,.8);}
+
+/* CONTENT */
+.content{padding-top:52px;}
+.section-block{margin-bottom:52px;}
+.section-anchor{scroll-margin-top:88px;}
+.section-divider{height:1px;background:linear-gradient(90deg,transparent,var(--line2),transparent);margin:14px 0 52px;}
+.sec-header{display:flex;align-items:flex-start;gap:14px;margin-bottom:22px;}
+.sec-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.si-cyan{background:rgba(12,228,250,.1);border:1px solid rgba(12,228,250,.2);color:var(--cyan);}
+.si-violet{background:rgba(123,95,235,.1);border:1px solid rgba(123,95,235,.2);color:var(--violet);}
+.si-orange{background:rgba(255,77,28,.1);border:1px solid rgba(255,77,28,.2);color:var(--orange);}
+.si-green{background:rgba(0,230,130,.08);border:1px solid rgba(0,230,130,.18);color:#00E682;}
+.si-rose{background:rgba(255,32,96,.1);border:1px solid rgba(255,32,96,.2);color:var(--rose);}
+.sec-sub-title{font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--snow3);margin-bottom:4px;}
+.sec-title{font-family:var(--ff-serif);font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:800;color:var(--snow);letter-spacing:-.02em;line-height:1.15;}
+
+/* IMAGES */
+.img-banner{position:relative;border-radius:16px;overflow:hidden;height:240px;margin-bottom:18px;}
+.img-banner img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .65s ease;}
+.img-banner:hover img{transform:scale(1.04);}
+.img-banner-ov{position:absolute;inset:0;}
+.ib-cyan{background:linear-gradient(135deg,rgba(12,228,250,.22) 0%,transparent 60%);}
+.ib-violet{background:linear-gradient(135deg,rgba(123,95,235,.22) 0%,transparent 60%);}
+.ib-orange{background:linear-gradient(135deg,rgba(255,77,28,.22) 0%,transparent 60%);}
+.ib-green{background:linear-gradient(135deg,rgba(0,230,130,.18) 0%,transparent 60%);}
+.img-banner-tag{position:absolute;top:16px;left:16px;padding:4px 11px;border-radius:6px;font-size:.62rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;backdrop-filter:blur(12px);}
+.ibt-cyan{background:rgba(12,228,250,.2);border:1px solid rgba(12,228,250,.35);color:var(--cyan);}
+.ibt-violet{background:rgba(123,95,235,.2);border:1px solid rgba(123,95,235,.35);color:#C4B5FD;}
+.ibt-orange{background:rgba(255,77,28,.2);border:1px solid rgba(255,77,28,.35);color:var(--orange2);}
+.ibt-green{background:rgba(0,230,130,.18);border:1px solid rgba(0,230,130,.32);color:#00E682;}
+.img-banner-label{position:absolute;bottom:14px;left:16px;font-size:.72rem;color:rgba(255,255,255,.6);font-weight:500;}
+
+.img-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px;}
+.img-cell{position:relative;border-radius:12px;overflow:hidden;height:170px;}
+.img-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease;}
+.img-cell:hover img{transform:scale(1.05);}
+.img-cell-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(4,6,15,.7) 0%,transparent 55%);}
+.img-cell-label{position:absolute;bottom:11px;left:12px;font-size:.68rem;color:rgba(255,255,255,.65);font-weight:600;}
+
+/* CARD */
+.card{position:relative;border-radius:14px;background:var(--card);border:1px solid var(--line2);overflow:hidden;margin-bottom:14px;}
+.card-accent{height:3px;width:100%;}
+.ca-cyan{background:linear-gradient(90deg,var(--cyan),var(--violet));}
+.ca-orange{background:linear-gradient(90deg,var(--orange),var(--rose));}
+.ca-violet{background:linear-gradient(90deg,var(--violet),var(--cyan));}
+.ca-green{background:linear-gradient(90deg,#00E682,var(--cyan));}
+.ca-rose{background:linear-gradient(90deg,var(--rose),var(--violet));}
+.card-body{padding:22px 24px 24px;font-size:.87rem;color:var(--snow2);line-height:1.82;}
+.card-body p{margin-bottom:10px;}
+.card-body p:last-child{margin-bottom:0;}
+.card-body strong{color:var(--snow);font-weight:700;}
+.card-body a{color:var(--cyan);text-decoration:underline;text-underline-offset:3px;}
+code{font-family:monospace;background:var(--ink3);padding:2px 7px;border-radius:4px;font-size:.82em;color:var(--cyan2);}
+
+/* HIGHLIGHT */
+.hl{display:flex;align-items:flex-start;gap:13px;padding:16px 18px;border-radius:12px;margin-bottom:12px;}
+.hl-cyan{background:rgba(12,228,250,.06);border:1px solid rgba(12,228,250,.16);}
+.hl-orange{background:rgba(255,77,28,.06);border:1px solid rgba(255,77,28,.16);}
+.hl-green{background:rgba(0,230,130,.05);border:1px solid rgba(0,230,130,.16);}
+.hl-violet{background:rgba(123,95,235,.06);border:1px solid rgba(123,95,235,.16);}
+.hl-ic{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.hi-cyan{background:rgba(12,228,250,.12);color:var(--cyan);}
+.hi-orange{background:rgba(255,77,28,.12);color:var(--orange);}
+.hi-green{background:rgba(0,230,130,.12);color:#00E682;}
+.hi-violet{background:rgba(123,95,235,.12);color:var(--violet);}
+.hl-t strong{font-size:.82rem;font-weight:700;color:var(--snow);display:block;margin-bottom:3px;}
+.hl-t p{font-size:.79rem;color:var(--snow2);line-height:1.65;margin:0;}
+.hl-t a{color:var(--cyan);}
+
+/* COOKIE TABLE */
+.ck-table-wrap{border-radius:14px;overflow:hidden;border:1px solid var(--line2);margin-bottom:14px;}
+.ck-table-head{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.6fr;background:var(--ink3);border-bottom:1px solid var(--line2);padding:10px 16px;gap:12px;}
+.ck-table-head span{font-size:.61rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--snow3);}
+.ck-row{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.6fr;padding:13px 16px;gap:12px;border-bottom:1px solid var(--line);transition:background .15s;}
+.ck-row:last-child{border-bottom:none;}
+.ck-row:hover{background:rgba(255,255,255,.016);}
+.ck-cell{font-size:.8rem;color:var(--snow2);line-height:1.5;}
+.ck-cell strong{color:var(--snow);font-weight:700;display:block;margin-bottom:2px;}
+.ck-cell code{font-family:monospace;background:var(--ink3);padding:1px 6px;border-radius:4px;font-size:.75em;color:var(--cyan2);}
+.ck-badge{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:50px;font-size:.61rem;font-weight:700;}
+.ck-ad{background:rgba(255,77,28,.1);border:1px solid rgba(255,77,28,.2);color:var(--orange);}
+.ck-func{background:rgba(12,228,250,.1);border:1px solid rgba(12,228,250,.18);color:var(--cyan);}
+.ck-pref{background:rgba(123,95,235,.1);border:1px solid rgba(123,95,235,.18);color:var(--violet);}
+.ck-none{background:rgba(0,230,130,.08);border:1px solid rgba(0,230,130,.18);color:#00E682;}
+@media(max-width:640px){.ck-table-head{grid-template-columns:1fr 1fr;}.ck-table-head span:nth-child(3),.ck-table-head span:nth-child(4){display:none;}.ck-row{grid-template-columns:1fr 1fr;}.ck-row .ck-cell:nth-child(3),.ck-row .ck-cell:nth-child(4){display:none;}}
+
+/* CONSENT CONTROL */
+.consent-ctrl{border-radius:16px;overflow:hidden;border:1px solid rgba(12,228,250,.2);background:linear-gradient(135deg,rgba(12,228,250,.04),rgba(123,95,235,.04));margin-bottom:14px;}
+.consent-ctrl-img{position:relative;height:180px;}
+.consent-ctrl-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .65s ease;}
+.consent-ctrl:hover .consent-ctrl-img img{transform:scale(1.04);}
+.consent-ctrl-img-ov{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 30%,rgba(4,6,15,.95) 100%);}
+.consent-ctrl-body{padding:22px 24px 26px;}
+.consent-ctrl-body h4{font-size:.92rem;font-weight:700;color:var(--snow);margin-bottom:10px;}
+.consent-ctrl-body p{font-size:.82rem;color:var(--snow2);line-height:1.75;margin-bottom:12px;}
+.consent-ctrl-body p:last-child{margin-bottom:0;}
+.consent-ctrl-body a{color:var(--cyan);}
+.consent-btn{display:inline-flex;align-items:center;gap:7px;padding:9px 18px;border-radius:9px;background:rgba(12,228,250,.1);border:1px solid rgba(12,228,250,.22);color:var(--cyan);font-size:.82rem;font-weight:700;cursor:pointer;transition:all .2s;}
+.consent-btn:hover{background:rgba(12,228,250,.18);transform:translateY(-1px);}
+
+/* FOOTER */
+footer{position:relative;z-index:2;border-top:1px solid var(--line);background:var(--ink);padding:30px 48px;}
+@media(max-width:768px){footer{padding:26px 20px;}}
+.footer-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.footer-copy{font-size:.73rem;color:var(--snow3);}
+.footer-links-sm{display:flex;gap:16px;}
+.footer-links-sm a{font-size:.73rem;color:var(--snow3);transition:color .15s;}
+.footer-links-sm a:hover{color:var(--cyan);}
+
+/* COOKIE BANNER */
+.cookie-banner{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);width:calc(100% - 40px);max-width:780px;background:var(--card);border:1px solid var(--line2);border-radius:18px;padding:18px 22px;display:none;flex-direction:column;gap:14px;z-index:8000;box-shadow:0 8px 48px rgba(0,0,0,.6);animation:slideUp .4s ease;}
+@keyframes slideUp{from{transform:translateX(-50%) translateY(20px);opacity:0;}to{transform:translateX(-50%) translateY(0);opacity:1;}}
+.ck-in{display:flex;align-items:flex-start;gap:13px;}
+.ck-ico{width:36px;height:36px;border-radius:9px;background:rgba(12,228,250,.08);border:1px solid rgba(12,228,250,.18);color:var(--cyan);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ck-t strong{font-size:.84rem;color:var(--snow);font-weight:700;display:block;margin-bottom:3px;}
+.ck-t p{font-size:.77rem;color:var(--snow2);line-height:1.6;margin:0;}
+.ck-t a{color:var(--cyan);}
+.ck-btns{display:flex;gap:8px;justify-content:flex-end;}
+.ck-acc{display:flex;align-items:center;gap:6px;padding:8px 17px;border-radius:9px;border:none;background:linear-gradient(135deg,var(--cyan),var(--cyan2));color:#020810;font-family:inherit;font-size:.77rem;font-weight:700;cursor:pointer;transition:all .2s;}
+.ck-acc:hover{transform:translateY(-1px);}
+.ck-dec{display:flex;align-items:center;gap:6px;padding:8px 17px;border-radius:9px;border:1px solid var(--line2);background:transparent;color:var(--snow2);font-family:inherit;font-size:.77rem;font-weight:600;cursor:pointer;}
+.ck-dec:hover{border-color:var(--snow3);color:var(--snow);}
+
+/* REVEAL */
+.rev{opacity:0;transform:translateY(22px);transition:opacity .55s cubic-bezier(.25,.46,.45,.94),transform .55s cubic-bezier(.25,.46,.45,.94);}
+.rev.in{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.07s;}.d2{transition-delay:.14s;}.d3{transition-delay:.21s;}.d4{transition-delay:.28s;}
+
+@media(max-width:768px){.hero{height:370px;}.img-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div id="cd"></div><div id="cr"></div>
+<div class="grain"></div>
+<div class="ambient"><div class="orb oa"></div><div class="orb ob"></div><div class="orb oc"></div></div>
+
+<header id="hdr">
+  <a href="index.html" class="logo">
+    <svg class="logo-mark" width="40" height="40" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="lgCK" x1="0" y1="0" x2="60" y2="60" gradientUnits="userSpaceOnUse"><stop stop-color="#0CE4FA"/><stop offset=".45" stop-color="#7B5FEB"/><stop offset="1" stop-color="#FF4D1C"/></linearGradient>
+        <radialGradient id="glCK" cx="35%" cy="22%" r="58%" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity=".22"/><stop offset="1" stop-color="white" stop-opacity="0"/></radialGradient>
+        <clipPath id="cpCK"><circle cx="30" cy="30" r="28"/></clipPath>
+      </defs>
+      <circle cx="30" cy="30" r="28" fill="url(#lgCK)"/>
+      <circle cx="30" cy="30" r="28" fill="url(#glCK)"/>
+      <g clip-path="url(#cpCK)">
+        <rect x="26" y="6" width="8" height="17" rx="4" fill="white" opacity=".92"/>
+        <rect x="24.5" y="21" width="11" height="2.5" rx="1.25" fill="white" opacity=".55"/>
+        <path d="M24 23 C22 32 22 41 30 54 C38 41 38 32 36 23 Z" fill="white" opacity=".93"/>
+        <line x1="30" y1="28" x2="30" y2="54" stroke="url(#lgCK)" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="30" cy="30" r="2.8" fill="url(#lgCK)"/>
+        <path d="M25 26 C23.5 33 23.5 41 26 49" stroke="white" stroke-width=".9" stroke-linecap="round" opacity=".38" fill="none"/>
+      </g>
+    </svg>Pixelskits
+  </a>
+  <div class="hdr-right">
+    <a href="index.html" class="back-btn">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to Pixelskits
+    </a>
+    <button class="theme-btn" id="themeBtn">
+      <svg id="t-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg id="t-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1614064548016-0b5c13ca2c85?w=1800&q=85&auto=format&fit=crop" alt="" loading="eager">
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>Legal Document · GDPR Art. 13 · ePrivacy</div>
+    <h1 class="hero-h">Cookie <span>Policy</span></h1>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Last updated March 2026
+      </div>
+      <div class="hero-meta-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Consent-gated advertising
+      </div>
+      <div class="hero-meta-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        You control your preferences
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-wrap">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-label">Contents</div>
+    <nav class="sidebar-nav">
+      <a class="sn-link active" href="#what">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        What Are Cookies
+      </a>
+      <a class="sn-link" href="#we-use">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10"/><path d="M12 8v4l3 3"/><circle cx="18.5" cy="5.5" r="2.5"/></svg>
+        Cookies We Use
+      </a>
+      <a class="sn-link" href="#adsense">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg>
+        Google AdSense
+      </a>
+      <a class="sn-link" href="#fonts">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+        Google Fonts
+      </a>
+      <a class="sn-link" href="#local-storage">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        localStorage
+      </a>
+      <a class="sn-link" href="#no-tracking">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        What We Don't Do
+      </a>
+      <a class="sn-link" href="#consent">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 6 9 17 4 12"/></svg>
+        Manage Consent
+      </a>
+      <a class="sn-link" href="#contact">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
+        Contact
+      </a>
+    </nav>
+    <div class="sidebar-divider"></div>
+    <div class="sb-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00E682" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span>Consent-gated by default</span>
+    </div>
+  </aside>
+
+  <main class="content">
+
+    <!-- WHAT ARE COOKIES -->
+    <div class="section-block section-anchor rev" id="what">
+      <div class="sec-header">
+        <div class="sec-icon si-violet">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <div>
+          <div class="sec-sub-title">The Basics</div>
+          <h2 class="sec-title">What Are Cookies</h2>
+        </div>
+      </div>
+      <div class="img-banner rev d1">
+        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&q=85&auto=format&fit=crop" alt="" loading="lazy">
+        <div class="img-banner-ov ib-violet"></div>
+        <div class="img-banner-tag ibt-violet">ePrivacy Directive</div>
+        <div class="img-banner-label">Small data files stored in your browser</div>
+      </div>
+      <div class="card rev d2">
+        <div class="card-accent ca-violet"></div>
+        <div class="card-body">
+          <p>Cookies are small text files placed in your browser by websites you visit. They can store preferences, session data, and identifiers that allow services to recognise your browser across visits.</p>
+          <p>Under the EU ePrivacy Directive and GDPR, non-essential cookies (such as advertising cookies) require your <strong>explicit consent before being set</strong>. Pixelskits enforces this through the consent banner shown on your first visit.</p>
+          <p>This policy covers every cookie and browser-storage mechanism used on <strong>pixelskits.site</strong>, who sets it, its purpose, and how long it lasts.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- COOKIES WE USE — FULL TABLE -->
+    <div class="section-block section-anchor rev" id="we-use">
+      <div class="sec-header">
+        <div class="sec-icon si-cyan">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10"/><path d="M12 8v4l3 3"/><circle cx="18.5" cy="5.5" r="2.5"/></svg>
+        </div>
+        <div>
+          <div class="sec-sub-title">Full Disclosure</div>
+          <h2 class="sec-title">Cookies We Use</h2>
+        </div>
+      </div>
+      <div class="card rev d1" style="padding:0;margin-bottom:0;">
+        <div class="card-accent ca-cyan"></div>
+        <div class="ck-table-wrap" style="border:none;border-radius:0;margin:0;">
+          <div class="ck-table-head">
+            <span>Name / Key</span>
+            <span>Provider</span>
+            <span>Type</span>
+            <span>Purpose &amp; Duration</span>
+          </div>
+          <!-- Consent -->
+          <div class="ck-row">
+            <div class="ck-cell"><code>pk-consent-v3</code></div>
+            <div class="ck-cell">Pixelskits</div>
+            <div class="ck-cell"><span class="ck-badge ck-func">Functional</span></div>
+            <div class="ck-cell">Stores your consent choices (ads, fonts). Saved in <code>localStorage</code>. Persists until cleared by you.</div>
+          </div>
+          <!-- Theme -->
+          <div class="ck-row">
+            <div class="ck-cell"><code>pk-theme</code></div>
+            <div class="ck-cell">Pixelskits</div>
+            <div class="ck-cell"><span class="ck-badge ck-pref">Preference</span></div>
+            <div class="ck-cell">Stores your dark/light mode choice. Saved in <code>localStorage</code>. Only written after consent is given. Persists until cleared.</div>
+          </div>
+          <!-- AdSense -->
+          <div class="ck-row">
+            <div class="ck-cell"><code>__gads</code><br><code>__gpi</code></div>
+            <div class="ck-cell">Google AdSense</div>
+            <div class="ck-cell"><span class="ck-badge ck-ad">Advertising</span></div>
+            <div class="ck-cell">Set by Google to serve and measure personalised ads. Only loaded after you <strong>accept</strong> the consent banner. Duration: up to 13 months.</div>
+          </div>
+          <!-- GA / DoubleClick -->
+          <div class="ck-row">
+            <div class="ck-cell"><code>IDE</code><br><code>DSID</code></div>
+            <div class="ck-cell">Google DoubleClick</div>
+            <div class="ck-cell"><span class="ck-badge ck-ad">Advertising</span></div>
+            <div class="ck-cell">Used by Google to track ad conversions and retargeting. Set only on ad consent. Duration: 13 months.</div>
+          </div>
+          <!-- Google Fonts -->
+          <div class="ck-row">
+            <div class="ck-cell"><code>NID</code></div>
+            <div class="ck-cell">Google Fonts</div>
+            <div class="ck-cell"><span class="ck-badge ck-func">Functional</span></div>
+            <div class="ck-cell">Google Fonts may log IP addresses when fonts are loaded. Only loaded after you accept fonts in the consent banner. Duration: 6 months.</div>
+          </div>
+          <!-- Cloudflare -->
+          <div class="ck-row">
+            <div class="ck-cell"><code>__cf_bm</code></div>
+            <div class="ck-cell">Cloudflare</div>
+            <div class="ck-cell"><span class="ck-badge ck-func">Functional</span></div>
+            <div class="ck-cell">Bot management cookie set by Cloudflare if the site uses their network. Session-scoped. Expires after 30 minutes of inactivity.</div>
+          </div>
+          <!-- No analytics -->
+          <div class="ck-row">
+            <div class="ck-cell" style="color:var(--snow3);font-style:italic;">Analytics cookies</div>
+            <div class="ck-cell" style="color:var(--snow3);">—</div>
+            <div class="ck-cell"><span class="ck-badge ck-none">Not used</span></div>
+            <div class="ck-cell" style="color:var(--snow3);">Pixelskits does not use Google Analytics, Mixpanel, Hotjar, or any other analytics or tracking platform.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- GOOGLE ADSENSE -->
+    <div class="section-block section-anchor rev" id="adsense">
+      <div class="sec-header">
+        <div class="sec-icon si-orange">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg>
+        </div>
+        <div>
+          <div class="sec-sub-title">Third-Party Cookies</div>
+          <h2 class="sec-title">Google AdSense</h2>
+        </div>
+      </div>
+      <div class="img-row rev d1">
+        <div class="img-cell">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=85&auto=format&fit=crop" alt="" loading="lazy">
+          <div class="img-cell-ov"></div>
+          <div class="img-cell-label">Consent-gated ads</div>
+        </div>
+        <div class="img-cell">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=85&auto=format&fit=crop" alt="" loading="lazy">
+          <div class="img-cell-ov"></div>
+          <div class="img-cell-label">What keeps the site free</div>
+        </div>
+      </div>
+      <div class="card rev d2">
+        <div class="card-accent ca-orange"></div>
+        <div class="card-body">
+          <p>Pixelskits uses <strong>Google AdSense</strong> to display advertising. This is the only revenue source that allows all 30 tools to remain free. Google AdSense is a third-party service operated by Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland.</p>
+          <p><strong>AdSense cookies are not loaded until you click "Accept All"</strong> on the consent banner. If you click "Reject All", no AdSense cookies are set and you will see non-personalised or no ads.</p>
+          <p>When AdSense is active, Google may collect your IP address, browser type, referring URL, and use cookies to serve you relevant advertisements. Google's own privacy policy governs this data collection. You can review it at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+          <p>You can also opt out of Google personalised advertising at any time via <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>.</p>
+        </div>
+      </div>
+      <div class="hl hl-orange rev d3">
+        <div class="hl-ic hi-orange">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <div class="hl-t">
+          <strong>GDPR basis for AdSense cookies</strong>
+          <p>Legal basis: <strong>Consent (GDPR Art. 6(1)(a))</strong>. You may withdraw consent at any time by clearing site data for pixelskits.site in your browser settings. The consent banner will reappear on next visit.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- GOOGLE FONTS -->
+    <div class="section-block section-anchor rev" id="fonts">
+      <div class="sec-header">
+        <div class="sec-icon si-violet">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+        </div>
+        <div>
+          <div class="sec-sub-title">Optional Service</div>
+          <h2 class="sec-title">Google Fonts</h2>
+        </div>
+      </div>
+      <div class="card rev d1">
+        <div class="card-accent ca-violet"></div>
+        <div class="card-body">
+          <p>Pixelskits uses <strong>Playfair Display</strong> and <strong>Bricolage Grotesque</strong> from Google Fonts to render headings and body text. Google Fonts is a service by Google LLC / Google Ireland Limited.</p>
+          <p>When fonts are loaded from Google's servers, <strong>Google may log your IP address</strong> as part of the request. This is a standard server-access log, not persistent tracking. Google states it does not store this data for advertising purposes when loaded via their Fonts API. More information: <a href="https://developers.google.com/fonts/faq/privacy" target="_blank" rel="noopener">developers.google.com/fonts/faq/privacy</a>.</p>
+          <p><strong>Google Fonts are not loaded until you accept fonts in the consent banner.</strong> If you reject, the site falls back to system fonts (<code>Inter</code>, <code>Segoe UI</code>, or your OS default).</p>
+        </div>
+      </div>
+      <div class="hl hl-violet rev d2">
+        <div class="hl-ic hi-violet">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="hl-t">
+          <strong>GDPR basis for Google Fonts</strong>
+          <p>Legal basis: <strong>Consent (GDPR Art. 6(1)(a))</strong>. Fonts are only fetched after explicit consent. Rejecting fonts consent does not affect any tool functionality.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- LOCALSTORAGE -->
+    <div class="section-block section-anchor rev" id="local-storage">
+      <div class="sec-header">
+        <div class="sec-icon si-cyan">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        </div>
+        <div>
+          <div class="sec-sub-title">Browser Storage</div>
+          <h2 class="sec-title">localStorage</h2>
+        </div>
+      </div>
+      <div class="img-banner rev d1" style="height:210px;">
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=85&auto=format&fit=crop" alt="" loading="lazy">
+        <div class="img-banner-ov ib-cyan"></div>
+        <div class="img-banner-tag ibt-cyan">Your device only</div>
+        <div class="img-banner-label">Preferences stored locally — never transmitted</div>
+      </div>
+      <div class="card rev d2">
+        <div class="card-accent ca-cyan"></div>
+        <div class="card-body">
+          <p>In addition to cookies, Pixelskits uses the browser's <strong>localStorage</strong> API to store two small preference objects on your device. This data never leaves your browser and is never transmitted to any server.</p>
+          <p><strong><code>pk-consent-v3</code></strong> — stores a JSON object containing your consent decisions (e.g. <code>{"ads":true,"fonts":false,"ts":"2026-03-09T..."}</code>). This is set the moment you interact with the consent banner.</p>
+          <p><strong><code>pk-theme</code></strong> — stores either <code>"dark"</code> or <code>"light"</code> to remember your display preference across visits. Only written after consent is given.</p>
+          <p>You can delete both at any time via your browser's developer tools or site data settings. Clearing site data will cause the consent banner to reappear on your next visit.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- WHAT WE DON'T DO -->
+    <div class="section-block section-anchor rev" id="no-tracking">
+      <div class="sec-header">
+        <div class="sec-icon si-green">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="sec-sub-title">What's absent</div>
+          <h2 class="sec-title">What We Don't Do</h2>
+        </div>
+      </div>
+      <div class="hl hl-green rev d1">
+        <div class="hl-ic hi-green">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="hl-t">
+          <strong>No analytics platform</strong>
+          <p>Pixelskits does not use Google Analytics, Plausible, Fathom, Hotjar, Mixpanel, PostHog, or any other analytics or heatmap service. We do not track what pages you visit, how long you stay, or where you click.</p>
+        </div>
+      </div>
+      <div class="hl hl-green rev d2">
+        <div class="hl-ic hi-green">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="hl-t">
+          <strong>No cross-site tracking</strong>
+          <p>We do not use Facebook Pixel, Twitter / X Pixel, TikTok Pixel, or any other social media tracking scripts. No data about your activity on Pixelskits is sent to social media networks.</p>
+        </div>
+      </div>
+      <div class="hl hl-green rev d3">
+        <div class="hl-ic hi-green">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="hl-t">
+          <strong>No file-processing cookies</strong>
+          <p>Your image and PDF files are processed entirely in your browser. No file contents, filenames, or metadata are ever sent to a server. We have no technical means to set cookies based on what you process.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- MANAGE CONSENT -->
+    <div class="section-block section-anchor rev" id="consent">
+      <div class="sec-header">
+        <div class="sec-icon si-cyan">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <div class="sec-sub-title">Your Control</div>
+          <h2 class="sec-title">Manage Consent</h2>
+        </div>
+      </div>
+      <div class="consent-ctrl rev d1">
+        <div class="consent-ctrl-img">
+          <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=1200&q=85&auto=format&fit=crop" alt="" loading="lazy">
+          <div class="consent-ctrl-img-ov"></div>
+        </div>
+        <div class="consent-ctrl-body">
+          <h4>Withdraw or change your consent at any time</h4>
+          <p>You can reset your consent preferences by clearing site data for pixelskits.site in your browser settings. The consent banner will reappear on your next page load, allowing you to choose again.</p>
+          <p>Alternatively, click the button below to clear the stored consent preference right now and reload the page.</p>
+          <button class="consent-btn" onclick="resetConsent()">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 .49-3.67"/></svg>
+            Reset My Cookie Preferences
+          </button>
+        </div>
+      </div>
+      <div class="card rev d2">
+        <div class="card-accent ca-cyan"></div>
+        <div class="card-body">
+          <p><strong>Browser-level controls:</strong> All modern browsers allow you to block or delete cookies via their settings. Note that blocking all cookies may affect the display of ads and fonts, but will not affect tool functionality as files are processed locally.</p>
+          <p><strong>Google opt-out:</strong> You can opt out of personalised Google advertising at <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a> or via the <a href="https://optout.aboutads.info" target="_blank" rel="noopener">Digital Advertising Alliance opt-out tool</a>.</p>
+          <p><strong>Do Not Track:</strong> Pixelskits does not operate any analytics or tracking scripts. The DNT signal does not change the behaviour of AdSense, which is governed by Google's own policies.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- CONTACT -->
+    <div class="section-block section-anchor rev" id="contact">
+      <div class="sec-header">
+        <div class="sec-icon si-rose">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
+        </div>
+        <div>
+          <div class="sec-sub-title">Questions</div>
+          <h2 class="sec-title">Contact</h2>
+        </div>
+      </div>
+      <div class="hl hl-cyan rev d1">
+        <div class="hl-ic hi-cyan">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
+        </div>
+        <div class="hl-t">
+          <strong>Cookie questions or GDPR requests</strong>
+          <p>Contact Ribon Patil directly at <a href="mailto:pixelskitss@gmail.com">pixelskitss@gmail.com</a>. We respond within 72 hours. For full privacy and data controller details, see the <a href="privacy.html">Privacy Policy</a>.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy">&copy; 2026 Pixelskits / Ribon Patil. All rights reserved.</div>
+    <div class="footer-links-sm">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="contact.html">Contact</a>
+      <a href="index.html">Back to App</a>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-modal="true" aria-label="Cookie consent">
+  <div class="ck-in">
+    <div class="ck-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10"/><path d="M12 8v4l3 3"/><circle cx="18.5" cy="5.5" r="2.5"/></svg></div>
+    <div class="ck-t">
+      <strong>Cookie &amp; Privacy Notice</strong>
+      <p>We use <strong>Google AdSense</strong> for advertising and optionally load <strong>Google Fonts</strong>. Both may log your IP address. Your files are always processed locally — never uploaded. <a href="cookies.html">Cookie Policy</a></p>
+    </div>
+  </div>
+  <div class="ck-btns">
+    <button class="ck-dec" onclick="consentDecline()"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Reject All</button>
+    <button class="ck-acc" onclick="consentAcceptAll()"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>Accept All</button>
+  </div>
+</div>
+
+<script>
+(function(){const d=document.getElementById('cd'),r=document.getElementById('cr');if(!d||!r)return;let mx=0,my=0,rx=0,ry=0;document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;d.style.transform=`translate(calc(${mx}px - 50%),calc(${my}px - 50%))`;},{passive:true});(function a(){rx+=(mx-rx)*.15;ry+=(my-ry)*.15;r.style.transform=`translate(calc(${rx}px - 50%),calc(${ry}px - 50%))`;requestAnimationFrame(a);})();document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('ch'));el.addEventListener('mouseleave',()=>document.body.classList.remove('ch'));});})();
+function setTheme(t){document.documentElement.dataset.theme=t;document.getElementById('t-sun').style.display=t==='light'?'block':'none';document.getElementById('t-moon').style.display=t==='dark'?'block':'none';try{const c=localStorage.getItem('pk-consent-v3');if(c)localStorage.setItem('pk-theme',t);}catch(e){}}
+document.getElementById('themeBtn').onclick=()=>setTheme(document.documentElement.dataset.theme==='dark'?'light':'dark');
+try{setTheme(localStorage.getItem('pk-theme')||'dark');}catch(e){setTheme('dark');}
+const FU='https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&display=swap';
+function _lf(){if(document.getElementById('gfL'))return;const p1=document.createElement('link');p1.rel='preconnect';p1.href='https://fonts.googleapis.com';document.head.appendChild(p1);const p2=document.createElement('link');p2.rel='preconnect';p2.href='https://fonts.gstatic.com';p2.crossOrigin='anonymous';document.head.appendChild(p2);const l=document.createElement('link');l.id='gfL';l.rel='stylesheet';l.href=FU;document.head.appendChild(l);}
+function _hb(){const b=document.getElementById('cookieBanner');if(b){b.style.opacity='0';b.style.transition='opacity .3s';setTimeout(()=>b.style.display='none',320);}}
+function _ckGet(){try{const v=localStorage.getItem('pk-consent-v3');return v?JSON.parse(v):null;}catch(e){return null;}}
+function _ckSet(ads,fonts){try{localStorage.setItem('pk-consent-v3',JSON.stringify({ads,fonts,ts:new Date().toISOString()}));}catch(e){}}
+function consentAcceptAll(){_ckSet(true,true);_lf();_hb();}
+function consentDecline(){_ckSet(false,false);_hb();}
+function resetConsent(){try{localStorage.removeItem('pk-consent-v3');localStorage.removeItem('pk-theme');}catch(e){}window.location.reload();}
+window.addEventListener('load',function(){var p=_ckGet();if(p){if(p.fonts)_lf();return;}setTimeout(function(){var b=document.getElementById('cookieBanner');if(!b)return;b.style.display='flex';},3500);});
+// Scroll reveal
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});},{threshold:.08});
+document.querySelectorAll('.rev').forEach(el=>obs.observe(el));
+// Active sidebar link
+const sections=document.querySelectorAll('.section-anchor');
+const links=document.querySelectorAll('.sn-link');
+const sObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){links.forEach(l=>{l.classList.remove('active');if(l.getAttribute('href')==='#'+e.target.id)l.classList.add('active');});}});},{threshold:.35});
+sections.forEach(s=>sObs.observe(s));
+</script>
+</body>
+</html>
