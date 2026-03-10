@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Page Not Found | Pixelskits</title>
+<meta name="description" content="The page you were looking for doesn't exist. Head back to Pixelskits and use 30 free browser-based image and PDF tools.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#FF4D1C">
+<style>
+:root{
+  --ink:#04060F;--ink2:#060810;--ink3:#0B0E1C;
+  --card:rgba(8,10,22,0.96);
+  --line:rgba(255,255,255,.06);--line2:rgba(255,255,255,.12);--line3:rgba(255,255,255,.24);
+  --snow:#EDF0FF;--snow2:#8890C0;--snow3:#454870;
+  --cyan:#0CE4FA;--cyan2:#5EF2FF;--cyanG:rgba(12,228,250,.18);
+  --orange:#FF4D1C;--orange2:#FF7A45;
+  --violet:#7B5FEB;--rose:#FF2060;
+  --ease:.4s cubic-bezier(.25,.46,.45,.94);--fast:.2s cubic-bezier(.25,.46,.45,.94);
+  --ff-sans:'Bricolage Grotesque','Inter','Segoe UI',system-ui,sans-serif;
+  --ff-serif:'Playfair Display',Georgia,'Times New Roman',serif;
+}
+[data-theme=light]{
+  --ink:#C8CCE8;--ink2:#BCC2E2;--ink3:#AEB4D8;
+  --card:rgba(185,192,235,.92);
+  --line:rgba(0,0,0,.10);--line2:rgba(0,0,0,.18);--line3:rgba(0,0,0,.32);
+  --snow:#02040E;--snow2:#1C2050;--snow3:#505490;
+  --cyan:#0782A0;--cyan2:#059BBD;
+  --orange:#B82800;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;background:var(--ink);}
+body{font-family:var(--ff-sans);background:var(--ink);color:var(--snow);overflow-x:hidden;transition:background var(--ease),color var(--ease);min-height:100vh;display:flex;flex-direction:column;}
+@media(pointer:fine){body{cursor:none;}}
+a{text-decoration:none;color:inherit;}
+button{font-family:inherit;}
+img{display:block;max-width:100%;}
+
+/* CURSOR */
+#cd,#cr{display:none;}
+@media(pointer:fine){
+  #cd{display:block;width:7px;height:7px;background:var(--cyan);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9997;transform:translate(-50%,-50%);}
+  #cr{display:block;width:36px;height:36px;border:1.5px solid rgba(12,228,250,.4);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9996;transform:translate(-50%,-50%);transition:width .25s,height .25s,border-color .25s,background .25s;}
+  body.ch #cr{width:52px;height:52px;border-color:var(--cyan);background:rgba(12,228,250,.06);}
+}
+
+/* GRAIN + AMBIENT */
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px;}
+.ambient{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);animation:drift 24s ease-in-out infinite;}
+.oa{width:650px;height:650px;background:radial-gradient(circle,rgba(255,77,28,.07),transparent 65%);top:-200px;left:-140px;}
+.ob{width:500px;height:500px;background:radial-gradient(circle,rgba(12,228,250,.06),transparent 65%);bottom:-80px;right:-80px;animation-delay:-9s;animation-duration:30s;}
+.oc{width:380px;height:380px;background:radial-gradient(circle,rgba(123,95,235,.06),transparent 65%);top:42%;left:44%;animation-delay:-18s;animation-duration:22s;}
+@keyframes drift{0%,100%{transform:translate(0,0) scale(1);}33%{transform:translate(60px,-50px) scale(1.07);}66%{transform:translate(-40px,60px) scale(.94);}}
+
+/* HEADER */
+header{position:fixed;top:0;left:0;right:0;z-index:510;height:68px;display:flex;align-items:center;padding:0 48px;backdrop-filter:blur(24px) saturate(160%);background:rgba(4,6,15,.8);border-bottom:1px solid var(--line);transition:background var(--ease);}
+@media(max-width:768px){header{padding:0 20px;}}
+[data-theme=light] header{background:rgba(243,244,252,.88);}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--ff-serif);font-size:1.32rem;font-weight:700;letter-spacing:.01em;flex-shrink:0;}
+.logo-mark{width:40px;height:40px;flex-shrink:0;transition:transform .4s ease;}
+.logo:hover .logo-mark{transform:rotate(-8deg) scale(1.08);}
+.hdr-right{margin-left:auto;display:flex;align-items:center;gap:10px;}
+.theme-btn{width:40px;height:40px;border-radius:10px;border:1px solid var(--line2);background:transparent;color:var(--snow2);display:flex;align-items:center;justify-content:center;transition:all var(--fast);cursor:pointer;}
+.theme-btn:hover{border-color:var(--cyan);color:var(--cyan);}
+
+/* MAIN */
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:68px 24px 60px;position:relative;z-index:2;}
+.container{max-width:720px;width:100%;text-align:center;}
+
+/* GIANT 404 */
+.four-wrap{position:relative;margin-bottom:32px;user-select:none;}
+.four-bg-img{position:absolute;inset:0;border-radius:24px;overflow:hidden;opacity:.18;}
+.four-bg-img img{width:100%;height:100%;object-fit:cover;display:block;}
+.four-num{font-family:var(--ff-serif);font-size:clamp(8rem,22vw,15rem);font-weight:900;line-height:1;letter-spacing:-.06em;background:linear-gradient(135deg,var(--orange) 0%,var(--violet) 50%,var(--cyan) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;z-index:2;padding:20px 0;}
+.four-glow{position:absolute;inset:0;z-index:1;pointer-events:none;}
+.four-glow::after{content:'';position:absolute;top:50%;left:50%;width:380px;height:180px;transform:translate(-50%,-50%);background:radial-gradient(ellipse,rgba(255,77,28,.18) 0%,transparent 70%);filter:blur(40px);}
+
+/* SVG COMPASS */
+.compass-wrap{display:flex;justify-content:center;margin-bottom:40px;}
+.compass-svg{animation:spin-slow 18s linear infinite;filter:drop-shadow(0 0 18px rgba(12,228,250,.35));}
+@keyframes spin-slow{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+.compass-inner{animation:spin-slow 18s linear infinite reverse;}
+
+/* TEXT */
+.err-eyebrow{display:inline-flex;align-items:center;gap:8px;padding:5px 13px 5px 9px;border-radius:50px;background:rgba(255,77,28,.1);border:1px solid rgba(255,77,28,.22);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange2);margin-bottom:20px;}
+.err-eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--orange);animation:pulse 2s ease infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(.65);}}
+.err-title{font-family:var(--ff-serif);font-size:clamp(1.5rem,4vw,2.4rem);font-weight:800;color:var(--snow);letter-spacing:-.03em;line-height:1.1;margin-bottom:14px;}
+.err-title span{background:linear-gradient(135deg,var(--cyan),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.err-sub{font-size:.93rem;color:var(--snow2);line-height:1.75;max-width:480px;margin:0 auto 38px;}
+
+/* ACTIONS */
+.actions{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:56px;}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:12px;background:linear-gradient(135deg,var(--cyan),var(--cyan2));color:#020810;font-size:.88rem;font-weight:800;border:none;cursor:pointer;transition:all .2s;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(12,228,250,.3);}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:12px;border:1px solid var(--line2);background:transparent;color:var(--snow2);font-size:.86rem;font-weight:600;transition:all .2s;}
+.btn-secondary:hover{border-color:var(--cyan);color:var(--cyan);}
+
+/* QUICK LINKS */
+.ql-label{font-size:.62rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--snow3);margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:10px;}
+.ql-label::before,.ql-label::after{content:'';width:40px;height:1px;background:var(--line2);}
+.ql-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:560px;margin:0 auto 56px;}
+@media(max-width:540px){.ql-grid{grid-template-columns:1fr 1fr;}}
+.ql-card{padding:16px 14px;border-radius:12px;background:var(--ink2);border:1px solid var(--line2);display:flex;flex-direction:column;align-items:center;gap:9px;transition:all .2s;text-align:center;}
+.ql-card:hover{border-color:var(--cyan);background:rgba(12,228,250,.04);transform:translateY(-2px);}
+.ql-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;}
+.ql-title{font-size:.76rem;font-weight:700;color:var(--snow2);transition:color .18s;}
+.ql-card:hover .ql-title{color:var(--cyan);}
+
+/* BOTTOM IMAGE ROW */
+.img-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:700px;margin:0 auto;}
+@media(max-width:560px){.img-strip{grid-template-columns:repeat(2,1fr);}}
+.img-strip-cell{position:relative;border-radius:12px;overflow:hidden;height:110px;}
+.img-strip-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease;}
+.img-strip-cell:hover img{transform:scale(1.08);}
+.img-strip-cell-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(4,6,15,.65) 0%,transparent 55%);}
+.img-strip-cell-label{position:absolute;bottom:8px;left:10px;font-size:.61rem;color:rgba(255,255,255,.6);font-weight:600;}
+
+/* FOOTER */
+footer{position:relative;z-index:2;border-top:1px solid var(--line);background:var(--ink);padding:28px 48px;}
+@media(max-width:768px){footer{padding:22px 20px;}}
+.footer-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.footer-copy{font-size:.73rem;color:var(--snow3);}
+.footer-links-sm{display:flex;gap:16px;}
+.footer-links-sm a{font-size:.73rem;color:var(--snow3);transition:color .15s;}
+.footer-links-sm a:hover{color:var(--cyan);}
+
+/* REVEAL */
+.rev{opacity:0;transform:translateY(20px);transition:opacity .55s cubic-bezier(.25,.46,.45,.94),transform .55s cubic-bezier(.25,.46,.45,.94);}
+.rev.in{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.07s;}.d2{transition-delay:.14s;}.d3{transition-delay:.21s;}.d4{transition-delay:.28s;}.d5{transition-delay:.35s;}
+</style>
+</head>
+<body>
+<div id="cd"></div><div id="cr"></div>
+<div class="grain"></div>
+<div class="ambient"><div class="orb oa"></div><div class="orb ob"></div><div class="orb oc"></div></div>
+
+<header>
+  <a href="index.html" class="logo">
+    <svg class="logo-mark" width="40" height="40" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="lg404" x1="0" y1="0" x2="60" y2="60" gradientUnits="userSpaceOnUse"><stop stop-color="#0CE4FA"/><stop offset=".45" stop-color="#7B5FEB"/><stop offset="1" stop-color="#FF4D1C"/></linearGradient>
+        <radialGradient id="gw404" cx="35%" cy="22%" r="58%" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity=".22"/><stop offset="1" stop-color="white" stop-opacity="0"/></radialGradient>
+        <clipPath id="cp404"><circle cx="30" cy="30" r="28"/></clipPath>
+      </defs>
+      <circle cx="30" cy="30" r="28" fill="url(#lg404)"/>
+      <circle cx="30" cy="30" r="28" fill="url(#gw404)"/>
+      <g clip-path="url(#cp404)">
+        <rect x="26" y="6" width="8" height="17" rx="4" fill="white" opacity=".92"/>
+        <rect x="24.5" y="21" width="11" height="2.5" rx="1.25" fill="white" opacity=".55"/>
+        <path d="M24 23 C22 32 22 41 30 54 C38 41 38 32 36 23 Z" fill="white" opacity=".93"/>
+        <line x1="30" y1="28" x2="30" y2="54" stroke="url(#lg404)" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="30" cy="30" r="2.8" fill="url(#lg404)"/>
+        <path d="M25 26 C23.5 33 23.5 41 26 49" stroke="white" stroke-width=".9" stroke-linecap="round" opacity=".38" fill="none"/>
+      </g>
+    </svg>Pixelskits
+  </a>
+  <div class="hdr-right">
+    <button class="theme-btn" id="themeBtn">
+      <svg id="t-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg id="t-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <!-- 404 NUMBER -->
+    <div class="four-wrap rev">
+      <div class="four-bg-img">
+        <img src="https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&q=80&auto=format&fit=crop" alt="" loading="eager">
+      </div>
+      <div class="four-glow"></div>
+      <div class="four-num">404</div>
+    </div>
+
+    <!-- COMPASS SVG -->
+    <div class="compass-wrap rev d1">
+      <svg class="compass-svg" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="cgA" x1="0" y1="0" x2="72" y2="72" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0CE4FA"/>
+            <stop offset="1" stop-color="#7B5FEB"/>
+          </linearGradient>
+          <linearGradient id="cgB" x1="72" y1="0" x2="0" y2="72" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FF4D1C"/>
+            <stop offset="1" stop-color="#FF2060"/>
+          </linearGradient>
+        </defs>
+        <!-- Outer ring -->
+        <circle cx="36" cy="36" r="34" stroke="rgba(12,228,250,.2)" stroke-width="1.5" fill="none"/>
+        <circle cx="36" cy="36" r="28" stroke="rgba(12,228,250,.1)" stroke-width="1" fill="none"/>
+        <!-- Tick marks -->
+        <line x1="36" y1="2" x2="36" y2="8" stroke="rgba(12,228,250,.5)" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="36" y1="64" x2="36" y2="70" stroke="rgba(12,228,250,.3)" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="2" y1="36" x2="8" y2="36" stroke="rgba(12,228,250,.3)" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="64" y1="36" x2="70" y2="36" stroke="rgba(12,228,250,.3)" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- Diagonal ticks -->
+        <line x1="11.5" y1="11.5" x2="15.7" y2="15.7" stroke="rgba(12,228,250,.15)" stroke-width="1" stroke-linecap="round"/>
+        <line x1="56.3" y1="56.3" x2="60.5" y2="60.5" stroke="rgba(12,228,250,.15)" stroke-width="1" stroke-linecap="round"/>
+        <line x1="60.5" y1="11.5" x2="56.3" y2="15.7" stroke="rgba(12,228,250,.15)" stroke-width="1" stroke-linecap="round"/>
+        <line x1="11.5" y1="60.5" x2="15.7" y2="56.3" stroke="rgba(12,228,250,.15)" stroke-width="1" stroke-linecap="round"/>
+        <!-- North arrow (cyan) -->
+        <g class="compass-inner">
+          <polygon points="36,10 39.5,36 36,32 32.5,36" fill="url(#cgA)" opacity=".95"/>
+          <!-- South arrow (orange) -->
+          <polygon points="36,62 39.5,36 36,40 32.5,36" fill="url(#cgB)" opacity=".8"/>
+        </g>
+        <!-- Center dot -->
+        <circle cx="36" cy="36" r="3.5" fill="url(#cgA)"/>
+        <circle cx="36" cy="36" r="1.5" fill="white" opacity=".8"/>
+      </svg>
+    </div>
+
+    <div class="err-eyebrow rev d1"><span class="err-eyebrow-dot"></span>Error 404 · Page Not Found</div>
+    <h1 class="err-title rev d2">You've drifted off the <span>map.</span></h1>
+    <p class="err-sub rev d3">The page you're looking for doesn't exist, was moved, or the URL was mistyped. Let's get you back to the tools.</p>
+
+    <div class="actions rev d3">
+      <a href="index.html" class="btn-primary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        Back to Pixelskits
+      </a>
+      <a href="javascript:history.back()" class="btn-secondary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Go Back
+      </a>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="ql-label rev d4">Or jump to</div>
+    <div class="ql-grid rev d4">
+      <a href="index.html#compress" class="ql-card">
+        <div class="ql-icon" style="background:rgba(12,228,250,.1);color:var(--cyan);">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/><path d="M12 8v8M8 12l4 4 4-4"/></svg>
+        </div>
+        <span class="ql-title">Compress</span>
+      </a>
+      <a href="index.html#resize" class="ql-card">
+        <div class="ql-icon" style="background:rgba(123,95,235,.1);color:var(--violet);">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+        </div>
+        <span class="ql-title">Resize</span>
+      </a>
+      <a href="index.html#convert" class="ql-card">
+        <div class="ql-icon" style="background:rgba(255,77,28,.1);color:var(--orange);">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="17,1 21,5 17,9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7,23 3,19 7,15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+        </div>
+        <span class="ql-title">Convert</span>
+      </a>
+      <a href="about.html" class="ql-card">
+        <div class="ql-icon" style="background:rgba(0,230,130,.08);color:#00E682;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <span class="ql-title">About</span>
+      </a>
+      <a href="contact.html" class="ql-card">
+        <div class="ql-icon" style="background:rgba(12,228,250,.1);color:var(--cyan);">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
+        </div>
+        <span class="ql-title">Contact</span>
+      </a>
+      <a href="privacy.html" class="ql-card">
+        <div class="ql-icon" style="background:rgba(123,95,235,.1);color:var(--violet);">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <span class="ql-title">Privacy</span>
+      </a>
+    </div>
+
+    <!-- IMAGE STRIP -->
+    <div class="img-strip rev d5">
+      <div class="img-strip-cell">
+        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=300&q=80&auto=format&fit=crop" alt="" loading="lazy">
+        <div class="img-strip-cell-ov"></div>
+        <div class="img-strip-cell-label">Compress</div>
+      </div>
+      <div class="img-strip-cell">
+        <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=300&q=80&auto=format&fit=crop" alt="" loading="lazy">
+        <div class="img-strip-cell-ov"></div>
+        <div class="img-strip-cell-label">Edit</div>
+      </div>
+      <div class="img-strip-cell">
+        <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=300&q=80&auto=format&fit=crop" alt="" loading="lazy">
+        <div class="img-strip-cell-ov"></div>
+        <div class="img-strip-cell-label">Filters</div>
+      </div>
+      <div class="img-strip-cell">
+        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=300&q=80&auto=format&fit=crop" alt="" loading="lazy">
+        <div class="img-strip-cell-ov"></div>
+        <div class="img-strip-cell-label">Banners</div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy">&copy; 2026 Pixelskits / Ribon Patil. All rights reserved.</div>
+    <div class="footer-links-sm">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){const d=document.getElementById('cd'),r=document.getElementById('cr');if(!d||!r)return;let mx=0,my=0,rx=0,ry=0;document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;d.style.transform=`translate(calc(${mx}px - 50%),calc(${my}px - 50%))`;},{passive:true});(function a(){rx+=(mx-rx)*.15;ry+=(my-ry)*.15;r.style.transform=`translate(calc(${rx}px - 50%),calc(${ry}px - 50%))`;requestAnimationFrame(a);})();document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('ch'));el.addEventListener('mouseleave',()=>document.body.classList.remove('ch'));});})();
+function setTheme(t){document.documentElement.dataset.theme=t;document.getElementById('t-sun').style.display=t==='light'?'block':'none';document.getElementById('t-moon').style.display=t==='dark'?'block':'none';try{localStorage.setItem('pk-theme',t);}catch(e){}}
+document.getElementById('themeBtn').onclick=()=>setTheme(document.documentElement.dataset.theme==='dark'?'light':'dark');
+try{setTheme(localStorage.getItem('pk-theme')||'dark');}catch(e){setTheme('dark');}
+// Reveal
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});},{threshold:.05});
+document.querySelectorAll('.rev').forEach(el=>obs.observe(el));
+// Auto redirect countdown (optional, commented out)
+// let t=10;const go=()=>{t--;if(t<=0)window.location='index.html';};setInterval(go,1000);
+</script>
+</body>
+</html>
