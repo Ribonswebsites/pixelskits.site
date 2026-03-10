@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Use — Pixelskits | Free Image & PDF Tools</title>
+<meta name="description" content="Pixelskits Terms of Use. Free for personal and commercial use. All image and PDF processing is local — your files never leave your device. Operated by Ribon Patil.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://pixelskits.app/terms.html">
+<meta property="og:title" content="Terms of Use — Pixelskits">
+<meta property="og:description" content="Pixelskits is free for personal and commercial use. No account required. All processing runs locally in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pixelskits.app/terms.html">
+<meta name="theme-color" content="#FF4D1C">
+<style>
+:root{
+  --ink:#04060F;--ink2:#060810;--ink3:#0B0E1C;
+  --card:rgba(8,10,22,0.96);
+  --line:rgba(255,255,255,.06);--line2:rgba(255,255,255,.12);--line3:rgba(255,255,255,.24);
+  --snow:#EDF0FF;--snow2:#8890C0;--snow3:#454870;
+  --cyan:#0CE4FA;--cyan2:#5EF2FF;--cyanG:rgba(12,228,250,.18);
+  --orange:#FF4D1C;--orange2:#FF7A45;--orangeG:rgba(255,77,28,.16);
+  --violet:#7B5FEB;--rose:#FF2060;
+  --ease:.4s cubic-bezier(.25,.46,.45,.94);--fast:.2s cubic-bezier(.25,.46,.45,.94);
+  --ff-sans:'Bricolage Grotesque','Inter','Segoe UI',system-ui,sans-serif;
+  --ff-serif:'Playfair Display',Georgia,'Times New Roman',serif;
+}
+[data-theme=light]{
+  --ink:#C8CCE8;--ink2:#BCC2E2;--ink3:#AEB4D8;
+  --card:rgba(185,192,235,.92);
+  --line:rgba(0,0,0,.10);--line2:rgba(0,0,0,.18);--line3:rgba(0,0,0,.32);
+  --snow:#02040E;--snow2:#1C2050;--snow3:#505490;
+  --cyan:#0782A0;--cyan2:#059BBD;--cyanG:rgba(7,130,160,.16);
+  --orange:#B82800;--orange2:#D04810;--orangeG:rgba(184,40,0,.12);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;background:var(--ink);}
+body{font-family:var(--ff-sans);background:var(--ink);color:var(--snow);overflow-x:hidden;transition:background var(--ease),color var(--ease);min-height:100vh;}
+@media(pointer:fine){body{cursor:none;}}
+a{text-decoration:none;color:inherit;}
+button{font-family:inherit;}
+img{display:block;max-width:100%;}
+#cd,#cr{display:none;}
+@media(pointer:fine){
+  #cd{display:block;width:7px;height:7px;background:var(--orange);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9997;transform:translate(-50%,-50%);}
+  #cr{display:block;width:36px;height:36px;border:1.5px solid rgba(255,77,28,.4);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9996;transform:translate(-50%,-50%);transition:width .25s,height .25s,border-color .25s,background .25s;}
+  body.ch #cr{width:52px;height:52px;border-color:var(--orange);background:rgba(255,77,28,.06);}
+}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px;}
+.ambient{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);animation:drift 24s ease-in-out infinite;}
+.oa{width:650px;height:650px;background:radial-gradient(circle,rgba(255,77,28,.05),transparent 65%);top:-160px;right:-140px;animation-delay:-4s;}
+.ob{width:500px;height:500px;background:radial-gradient(circle,rgba(12,228,250,.06),transparent 65%);bottom:-80px;left:-80px;animation-delay:-9s;animation-duration:30s;}
+.oc{width:380px;height:380px;background:radial-gradient(circle,rgba(123,95,235,.05),transparent 65%);top:42%;left:44%;animation-delay:-18s;animation-duration:22s;}
+@keyframes drift{0%,100%{transform:translate(0,0) scale(1);}33%{transform:translate(60px,-50px) scale(1.07);}66%{transform:translate(-40px,60px) scale(.94);}}
+
+header{position:fixed;top:0;left:0;right:0;z-index:510;height:68px;display:flex;align-items:center;padding:0 48px;backdrop-filter:blur(24px) saturate(160%);background:rgba(4,6,15,.8);border-bottom:1px solid var(--line);transition:background var(--ease);}
+@media(max-width:768px){header{padding:0 20px;}}
+[data-theme=light] header{background:rgba(243,244,252,.88);}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--ff-serif);font-size:1.32rem;font-weight:700;letter-spacing:.01em;flex-shrink:0;}
+.logo-mark{width:40px;height:40px;flex-shrink:0;transition:transform .4s ease;}
+.logo:hover .logo-mark{transform:rotate(-8deg) scale(1.08);}
+.hdr-right{margin-left:auto;display:flex;align-items:center;gap:10px;}
+.theme-btn{width:40px;height:40px;border-radius:10px;border:1px solid var(--line2);background:transparent;color:var(--snow2);display:flex;align-items:center;justify-content:center;transition:all var(--fast);cursor:pointer;}
+.theme-btn:hover{border-color:var(--orange);color:var(--orange);}
+.back-btn{display:flex;align-items:center;gap:7px;padding:9px 16px;border-radius:10px;border:1px solid var(--line2);background:transparent;color:var(--snow2);font-size:.82rem;font-weight:600;transition:all var(--fast);}
+.back-btn:hover{border-color:var(--orange);color:var(--orange);}
+
+.hero{position:relative;padding-top:68px;height:520px;overflow:hidden;display:flex;align-items:flex-end;}
+.hero-bg{position:absolute;inset:0;z-index:0;}
+.hero-bg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 8s ease;}
+.hero:hover .hero-bg img{transform:scale(1.04);}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(4,6,15,.25) 0%,rgba(4,6,15,.0) 30%,rgba(4,6,15,.97) 100%);}
+.hero-bg::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,77,28,.08) 0%,transparent 55%);z-index:1;}
+.hero-content{position:relative;z-index:2;padding:0 48px 56px;width:100%;}
+@media(max-width:768px){.hero-content{padding:0 20px 40px;}}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;padding:5px 13px 5px 9px;border-radius:50px;background:rgba(255,77,28,.12);border:1px solid rgba(255,77,28,.25);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:20px;}
+.hero-eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--orange);animation:pulse 2s ease infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(.65);}}
+.hero-h{font-family:var(--ff-serif);font-size:clamp(2.8rem,5.5vw,4.8rem);font-weight:900;line-height:1.02;letter-spacing:-.04em;color:var(--snow);max-width:700px;}
+.hero-h span{background:linear-gradient(135deg,var(--orange),var(--rose));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-meta{display:flex;align-items:center;gap:22px;margin-top:18px;flex-wrap:wrap;}
+.hero-meta-item{display:flex;align-items:center;gap:7px;font-size:.79rem;color:rgba(237,240,255,.55);}
+.hero-meta-item svg{color:var(--orange);opacity:.8;}
+
+.page-wrap{position:relative;z-index:2;max-width:1140px;margin:0 auto;padding:0 48px 100px;display:grid;grid-template-columns:228px 1fr;gap:64px;align-items:start;}
+@media(max-width:920px){.page-wrap{grid-template-columns:1fr;padding:0 20px 80px;gap:0;}}
+.sidebar{position:sticky;top:88px;padding-top:52px;}
+@media(max-width:920px){.sidebar{position:static;padding-top:32px;}}
+.sidebar-label{font-size:.61rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--snow3);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.sidebar-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--line2),transparent);}
+.sidebar-nav{display:flex;flex-direction:column;gap:1px;}
+.sn-link{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;font-size:.79rem;color:var(--snow2);transition:all .18s;cursor:pointer;border:1px solid transparent;background:transparent;width:100%;text-align:left;text-decoration:none;}
+.sn-link:hover{background:var(--line);color:var(--snow);}
+.sn-link.active{background:var(--orangeG);color:var(--orange);border-color:rgba(255,77,28,.2);}
+.sn-link svg{flex-shrink:0;opacity:.65;}
+.sn-link.active svg{opacity:1;}
+.sidebar-divider{height:1px;background:var(--line);margin:12px 0;}
+.sb-badge{display:flex;align-items:center;gap:8px;padding:10px 11px;border-radius:10px;background:rgba(255,77,28,.05);border:1px solid rgba(255,77,28,.14);font-size:.71rem;color:var(--snow3);line-height:1.55;}
+
+.content{padding-top:52px;}
+.section-anchor{scroll-margin-top:90px;}
+.section-block{margin-bottom:56px;}
+.section-divider{height:1px;background:linear-gradient(90deg,transparent,var(--line2),transparent);margin:52px 0;}
+.sec-header{display:flex;align-items:flex-start;gap:15px;margin-bottom:22px;}
+.sec-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid;}
+.si-cyan{background:rgba(12,228,250,.1);border-color:rgba(12,228,250,.2);color:var(--cyan);}
+.si-orange{background:rgba(255,77,28,.1);border-color:rgba(255,77,28,.2);color:var(--orange);}
+.si-violet{background:rgba(123,95,235,.1);border-color:rgba(123,95,235,.2);color:var(--violet);}
+.si-rose{background:rgba(255,32,96,.1);border-color:rgba(255,32,96,.2);color:var(--rose);}
+.si-green{background:rgba(0,230,130,.1);border-color:rgba(0,230,130,.2);color:#00E682;}
+.si-snow{background:rgba(237,240,255,.05);border-color:rgba(237,240,255,.1);color:var(--snow2);}
+.sec-title{font-family:var(--ff-serif);font-size:1.38rem;font-weight:700;color:var(--snow);line-height:1.12;margin-bottom:3px;}
+.sec-sub-title{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);}
+
+/* IMAGE COMPONENTS */
+.img-banner{position:relative;border-radius:18px;overflow:hidden;height:210px;margin-bottom:18px;border:1px solid var(--line2);}
+.img-banner img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .65s ease;}
+.img-banner:hover img{transform:scale(1.05);}
+.img-banner-ov{position:absolute;inset:0;pointer-events:none;}
+.ib-orange{background:linear-gradient(135deg,rgba(255,77,28,.16) 0%,transparent 50%),linear-gradient(to bottom,transparent 40%,rgba(4,6,15,.88) 100%);}
+.ib-rose{background:linear-gradient(135deg,rgba(255,32,96,.14) 0%,transparent 50%),linear-gradient(to bottom,transparent 40%,rgba(4,6,15,.88) 100%);}
+.ib-cyan{background:linear-gradient(135deg,rgba(12,228,250,.14) 0%,transparent 50%),linear-gradient(to bottom,transparent 40%,rgba(4,6,15,.88) 100%);}
+.ib-violet{background:linear-gradient(135deg,rgba(123,95,235,.14) 0%,transparent 50%),linear-gradient(to bottom,transparent 40%,rgba(4,6,15,.88) 100%);}
+.ib-green{background:linear-gradient(135deg,rgba(0,230,130,.12) 0%,transparent 50%),linear-gradient(to bottom,transparent 40%,rgba(4,6,15,.88) 100%);}
+.img-banner-label{position:absolute;bottom:16px;left:20px;font-size:.62rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(237,240,255,.55);}
+.img-banner-tag{position:absolute;top:14px;right:14px;padding:4px 10px;border-radius:50px;font-size:.61rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;}
+.ibt-orange{background:rgba(255,77,28,.18);border:1px solid rgba(255,77,28,.3);color:var(--orange);}
+.ibt-rose{background:rgba(255,32,96,.16);border:1px solid rgba(255,32,96,.28);color:var(--rose);}
+.ibt-cyan{background:rgba(12,228,250,.16);border:1px solid rgba(12,228,250,.28);color:var(--cyan);}
+.ibt-violet{background:rgba(123,95,235,.16);border:1px solid rgba(123,95,235,.28);color:#c4b5fd;}
+.ibt-green{background:rgba(0,230,130,.14);border:1px solid rgba(0,230,130,.26);color:#00E682;}
+
+.img-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px;}
+.img-cell{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line2);}
+.img-cell img{width:100%;height:148px;object-fit:cover;display:block;transition:transform .55s ease;}
+.img-cell:hover img{transform:scale(1.06);}
+.img-cell-ov{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 38%,rgba(4,6,15,.82) 100%);pointer-events:none;}
+.img-cell-label{position:absolute;bottom:10px;left:13px;font-size:.63rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(237,240,255,.65);}
+.img-cell-badge{position:absolute;top:9px;right:9px;padding:3px 8px;border-radius:50px;font-size:.59rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;}
+.icb-orange{background:rgba(255,77,28,.18);border:1px solid rgba(255,77,28,.28);color:var(--orange);}
+.icb-green{background:rgba(0,230,130,.18);border:1px solid rgba(0,230,130,.28);color:#00E682;}
+.icb-rose{background:rgba(255,32,96,.16);border:1px solid rgba(255,32,96,.26);color:var(--rose);}
+.icb-cyan{background:rgba(12,228,250,.16);border:1px solid rgba(12,228,250,.26);color:var(--cyan);}
+.icb-violet{background:rgba(123,95,235,.16);border:1px solid rgba(123,95,235,.26);color:#c4b5fd;}
+
+.img-trio{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:18px;}
+.img-trio .img-cell img{height:120px;}
+
+.photo-card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-bottom:14px;transition:border-color .3s;}
+.photo-card:hover{border-color:var(--line2);}
+.photo-card-img{position:relative;height:170px;overflow:hidden;}
+.photo-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .65s ease;}
+.photo-card:hover .photo-card-img img{transform:scale(1.05);}
+.photo-card-img-ov{position:absolute;inset:0;pointer-events:none;}
+.photo-card-body{padding:22px 24px;}
+.photo-card-body p{font-size:.87rem;color:var(--snow2);line-height:1.82;margin-bottom:9px;}
+.photo-card-body p:last-child{margin-bottom:0;}
+.photo-card-body strong{color:var(--snow);font-weight:700;}
+.photo-card-body a{color:var(--orange);text-decoration:underline;text-underline-offset:3px;}
+.pctag{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:50px;font-size:.61rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:10px;border:1px solid;}
+.pctag-orange{background:rgba(255,77,28,.1);border-color:rgba(255,77,28,.2);color:var(--orange);}
+.pctag-rose{background:rgba(255,32,96,.1);border-color:rgba(255,32,96,.2);color:var(--rose);}
+.pctag-violet{background:rgba(123,95,235,.1);border-color:rgba(123,95,235,.2);color:var(--violet);}
+.pctag-green{background:rgba(0,230,130,.1);border-color:rgba(0,230,130,.2);color:#00E682;}
+.pctag-cyan{background:rgba(12,228,250,.1);border-color:rgba(12,228,250,.2);color:var(--cyan);}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;margin-bottom:14px;position:relative;overflow:hidden;transition:border-color .3s;}
+.card:hover{border-color:var(--line2);}
+.card-accent{position:absolute;top:0;left:0;right:0;height:2px;}
+.ca-orange{background:linear-gradient(90deg,var(--orange),var(--rose));}
+.ca-rose{background:linear-gradient(90deg,var(--rose),var(--orange));}
+.ca-violet{background:linear-gradient(90deg,var(--violet),var(--cyan));}
+.ca-cyan{background:linear-gradient(90deg,var(--cyan),var(--violet));}
+.ca-green{background:linear-gradient(90deg,#00E682,var(--cyan));}
+.card-body p{font-size:.87rem;color:var(--snow2);line-height:1.82;margin-bottom:10px;}
+.card-body p:last-child{margin-bottom:0;}
+.card-body strong{color:var(--snow);font-weight:700;}
+.card-body a{color:var(--orange);text-decoration:underline;text-underline-offset:3px;}
+.card-label{font-size:.64rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--snow3);margin-bottom:10px;}
+
+/* RULE LIST */
+.rule-list{display:flex;flex-direction:column;gap:10px;}
+.rule-item{display:flex;align-items:flex-start;gap:11px;font-size:.85rem;color:var(--snow2);line-height:1.7;}
+.ri{width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.ri-ok{background:rgba(0,230,130,.12);color:#00E682;}
+.ri-no{background:rgba(255,32,96,.12);color:var(--rose);}
+
+/* HIGHLIGHT */
+.hl{display:flex;align-items:flex-start;gap:13px;padding:16px 18px;border-radius:12px;margin-bottom:16px;}
+.hl-orange{background:rgba(255,77,28,.06);border:1px solid rgba(255,77,28,.16);}
+.hl-green{background:rgba(0,230,130,.05);border:1px solid rgba(0,230,130,.16);}
+.hl-rose{background:rgba(255,32,96,.05);border:1px solid rgba(255,32,96,.14);}
+.hl-ic{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.hi-orange{background:rgba(255,77,28,.12);color:var(--orange);}
+.hi-green{background:rgba(0,230,130,.12);color:#00E682;}
+.hi-rose{background:rgba(255,32,96,.12);color:var(--rose);}
+.hl-t strong{font-size:.82rem;font-weight:700;color:var(--snow);display:block;margin-bottom:3px;}
+.hl-t p{font-size:.79rem;color:var(--snow2);line-height:1.65;margin:0;}
+
+/* DISCLAIMER CARD */
+.disclaim{background:linear-gradient(135deg,rgba(255,77,28,.05),rgba(255,32,96,.04));border:1px solid rgba(255,77,28,.18);border-radius:16px;overflow:hidden;margin-bottom:14px;}
+.disclaim-img{position:relative;height:160px;overflow:hidden;}
+.disclaim-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .65s ease;}
+.disclaim:hover .disclaim-img img{transform:scale(1.04);}
+.disclaim-img-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,77,28,.14) 0%,transparent 50%),linear-gradient(to bottom,transparent 30%,rgba(4,6,15,.9) 100%);}
+.disclaim-body{padding:20px 24px;}
+.disclaim-body p{font-size:.87rem;color:var(--snow2);line-height:1.82;margin-bottom:8px;}
+.disclaim-body p:last-child{margin-bottom:0;}
+.disclaim-body strong{color:var(--snow);font-weight:700;}
+
+/* TRADEMARKS GRID */
+.tm-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;}
+.tm-cell{position:relative;border-radius:13px;overflow:hidden;border:1px solid var(--line2);}
+.tm-cell img{width:100%;height:120px;object-fit:cover;display:block;transition:transform .55s ease;}
+.tm-cell:hover img{transform:scale(1.06);}
+.tm-cell-ov{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 35%,rgba(4,6,15,.85) 100%);pointer-events:none;}
+.tm-cell-name{position:absolute;bottom:10px;left:12px;font-size:.75rem;font-weight:700;color:var(--snow);}
+.tm-cell-note{position:absolute;bottom:26px;left:12px;font-size:.6rem;color:var(--snow3);letter-spacing:.07em;text-transform:uppercase;}
+
+/* CONTACT */
+.contact-card{background:linear-gradient(135deg,rgba(255,77,28,.06),rgba(123,95,235,.05));border:1px solid rgba(255,77,28,.18);border-radius:18px;overflow:hidden;}
+.contact-img{position:relative;height:190px;overflow:hidden;}
+.contact-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .65s ease;}
+.contact-card:hover .contact-img img{transform:scale(1.04);}
+.contact-img-ov{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 30%,rgba(4,6,15,.92) 100%);}
+.contact-body{padding:22px 26px 26px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
+.contact-ic{width:48px;height:48px;border-radius:13px;background:rgba(255,77,28,.12);border:1px solid rgba(255,77,28,.22);display:flex;align-items:center;justify-content:center;color:var(--orange);flex-shrink:0;}
+.contact-info h4{font-size:.94rem;font-weight:700;color:var(--snow);margin-bottom:4px;}
+.contact-info p{font-size:.8rem;color:var(--snow2);margin-bottom:10px;}
+.contact-email{display:inline-flex;align-items:center;gap:7px;padding:8px 16px;border-radius:9px;background:rgba(255,77,28,.1);border:1px solid rgba(255,77,28,.22);color:var(--orange);font-size:.82rem;font-weight:700;transition:all .2s;}
+.contact-email:hover{background:rgba(255,77,28,.18);transform:translateY(-1px);}
+
+footer{position:relative;z-index:2;border-top:1px solid var(--line);background:var(--ink);padding:30px 48px;}
+@media(max-width:768px){footer{padding:26px 20px;}}
+.footer-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.footer-copy{font-size:.73rem;color:var(--snow3);}
+.footer-links-sm{display:flex;gap:16px;}
+.footer-links-sm a{font-size:.73rem;color:var(--snow3);transition:color .15s;}
+.footer-links-sm a:hover{color:var(--orange);}
+
+.cookie-banner{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);width:calc(100% - 40px);max-width:780px;background:var(--card);border:1px solid var(--line2);border-radius:18px;padding:18px 22px;display:none;flex-direction:column;gap:14px;z-index:8000;box-shadow:0 8px 48px rgba(0,0,0,.6);animation:slideUp .4s ease;}
+@keyframes slideUp{from{transform:translateX(-50%) translateY(20px);opacity:0;}to{transform:translateX(-50%) translateY(0);opacity:1;}}
+.ck-in{display:flex;align-items:flex-start;gap:13px;}
+.ck-ico{width:36px;height:36px;border-radius:9px;background:rgba(255,77,28,.08);border:1px solid rgba(255,77,28,.18);color:var(--orange);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ck-t strong{font-size:.84rem;color:var(--snow);font-weight:700;display:block;margin-bottom:3px;}
+.ck-t p{font-size:.77rem;color:var(--snow2);line-height:1.6;margin:0;}
+.ck-t a{color:var(--orange);}
+.ck-btns{display:flex;gap:8px;justify-content:flex-end;}
+.ck-acc{display:flex;align-items:center;gap:6px;padding:8px 17px;border-radius:9px;border:none;background:linear-gradient(135deg,var(--orange),var(--rose));color:#fff;font-family:inherit;font-size:.77rem;font-weight:700;cursor:pointer;transition:all .2s;}
+.ck-acc:hover{transform:translateY(-1px);}
+.ck-dec{display:flex;align-items:center;gap:6px;padding:8px 17px;border-radius:9px;border:1px solid var(--line2);background:transparent;color:var(--snow2);font-family:inherit;font-size:.77rem;font-weight:600;cursor:pointer;}
+.ck-dec:hover{border-color:var(--snow3);color:var(--snow);}
+
+.rev{opacity:0;transform:translateY(22px);transition:opacity .55s cubic-bezier(.25,.46,.45,.94),transform .55s cubic-bezier(.25,.46,.45,.94);}
+.rev.in{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.07s;}.d2{transition-delay:.14s;}.d3{transition-delay:.21s;}
+
+@media(max-width:768px){.hero{height:360px;}.img-row,.tm-grid{grid-template-columns:1fr;}.img-trio{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<div id="cd"></div><div id="cr"></div>
+<div class="grain"></div>
+<div class="ambient"><div class="orb oa"></div><div class="orb ob"></div><div class="orb oc"></div></div>
+
+<header id="hdr">
+  <a href="index.html" class="logo">
+    <svg class="logo-mark" width="40" height="40" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="lg2" x1="0" y1="0" x2="60" y2="60" gradientUnits="userSpaceOnUse"><stop stop-color="#0CE4FA"/><stop offset=".45" stop-color="#7B5FEB"/><stop offset="1" stop-color="#FF4D1C"/></linearGradient>
+        <radialGradient id="glow2" cx="35%" cy="22%" r="58%" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity=".22"/><stop offset="1" stop-color="white" stop-opacity="0"/></radialGradient>
+        <clipPath id="cp2"><circle cx="30" cy="30" r="28"/></clipPath>
+      </defs>
+      <circle cx="30" cy="30" r="28" fill="url(#lg2)"/>
+      <circle cx="30" cy="30" r="28" fill="url(#glow2)"/>
+      <g clip-path="url(#cp2)">
+        <rect x="26" y="6" width="8" height="17" rx="4" fill="white" opacity=".92"/>
+        <rect x="24.5" y="21" width="11" height="2.5" rx="1.25" fill="white" opacity=".55"/>
+        <path d="M24 23 C22 32 22 41 30 54 C38 41 38 32 36 23 Z" fill="white" opacity=".93"/>
+        <line x1="30" y1="28" x2="30" y2="54" stroke="url(#lg2)" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="30" cy="30" r="2.8" fill="url(#lg2)"/>
+        <path d="M25 26 C23.5 33 23.5 41 26 49" stroke="white" stroke-width=".9" stroke-linecap="round" opacity=".38" fill="none"/>
+      </g>
+    </svg>
+    </svg>Pixelskits
+  </a>
+  <div class="hdr-right">
+    <a href="index.html" class="back-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Back to Pixelskits</a>
+    <button class="theme-btn" id="themeBtn"><svg id="t-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg><svg id="t-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1800&q=85&auto=format&fit=crop" alt="" loading="eager"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>Legal Document · Effective March 2026</div>
+    <h1 class="hero-h">Terms of <span>Use</span></h1>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Free — personal and commercial use</div>
+      <div class="hero-meta-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>No account required</div>
+      <div class="hero-meta-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg>All processing local</div>
+    </div>
+  </div>
+</div>
+
+<div class="page-wrap">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-label">Contents</div>
+    <nav class="sidebar-nav">
+      <a class="sn-link active" href="#agreement"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Agreement</a>
+      <a class="sn-link" href="#free"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Free to Use</a>
+      <a class="sn-link" href="#warranty"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/></svg>No Warranty</a>
+      <a class="sn-link" href="#your-content"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Your Content</a>
+      <a class="sn-link" href="#acceptable"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Acceptable Use</a>
+      <a class="sn-link" href="#smart-tools"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Smart Tools</a>
+      <a class="sn-link" href="#third-party"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Third-Party Tools</a>
+      <a class="sn-link" href="#trademarks"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>Trademarks</a>
+      <a class="sn-link" href="#pdf-limits"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 15 12 18 15 15"/></svg>PDF Limitations</a>
+      <a class="sn-link" href="#governing"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Governing Law</a>
+    </nav>
+    <div class="sidebar-divider"></div>
+    <div class="sb-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><span>Free forever — personal and commercial</span></div>
+  </aside>
+
+  <main class="content">
+
+    <!-- AGREEMENT -->
+    <div class="section-block section-anchor rev" id="agreement">
+      <div class="sec-header"><div class="sec-icon si-orange"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg></div><div><div class="sec-sub-title">Start here</div><h2 class="sec-title">Agreement</h2></div></div>
+      <div class="img-banner rev d1"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=85&auto=format&fit=crop" alt="" loading="lazy"><div class="img-banner-ov ib-orange"></div><div class="img-banner-tag ibt-orange">Ribon Patil</div><div class="img-banner-label">Terms effective March 2026 — Ribon Patil</div></div>
+      <div class="card rev d2"><div class="card-accent ca-orange"></div><div class="card-body"><p>By using Pixelskits you agree to these Terms of Use. These terms constitute a legally binding agreement between you and <strong>Ribon Patil</strong> (an individual operating from India), the operator of Pixelskits. If you do not agree, please do not use the site.</p><p>We reserve the right to modify these terms at any time. For <strong>material changes</strong>, we will provide reasonable notice by displaying a prominent banner on the site for at least 14 days before the changes take effect. Continued use of Pixelskits after the close of that notice period constitutes acceptance of the updated terms. Non-material changes (such as corrections of typographical errors or clarifications that do not affect your rights) take effect immediately.</p></div></div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- FREE TO USE -->
+    <div class="section-block section-anchor" id="free">
+      <div class="sec-header rev"><div class="sec-icon si-green"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div><div class="sec-sub-title">Always</div><h2 class="sec-title">Free to Use</h2></div></div>
+      <div class="hl hl-green rev d1"><div class="hl-ic hi-green"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg></div><div class="hl-t"><strong>Pixelskits is free for personal and commercial use.</strong><p>No account, no subscription, no hidden paywalls. Every tool is and will remain free. The output of Pixelskits tools is yours — use it however you like for any lawful purpose.</p></div></div>
+      <div class="img-row rev d2">
+        <div class="img-cell"><img src="https://images.unsplash.com/photo-1579621970795-87010da05e24?w=600&q=85&auto=format&fit=crop" alt="" loading="lazy"><div class="img-cell-ov"></div><div class="img-cell-badge icb-green">Free forever</div><div class="img-cell-label">No account needed</div></div>
+        <div class="img-cell"><img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=85&auto=format&fit=crop" alt="" loading="lazy"><div class="img-cell-ov"></div><div class="img-cell-badge icb-orange">Commercial use</div><div class="img-cell-label">Outputs are yours to keep</div></div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- NO WARRANTY -->
+    <div class="section-block section-anchor" id="warranty">
+      <div class="sec-header rev"><div class="sec-icon si-rose"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><div><div class="sec-sub-title">Important limitation</div><h2 class="sec-title">No Warranty</h2></div></div>
+      <div class="disclaim rev d1">
+        <div class="disclaim-img"><img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1000&q=85&auto=format&fit=crop" alt="" loading="lazy"><div class="disclaim-img-ov"></div></div>
+        <div class="disclaim-body"><p><strong>Provided "as is" without warranty of any kind.</strong> We do not guarantee that tools will be error-free, uninterrupted, produce accurate results, or be suitable for any particular purpose. Browser-based processing is subject to device limitations, browser compatibility, and available memory.</p><p>To the fullest extent permitted by applicable law, we shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of, or inability to use, Pixelskits or its outputs. <strong>Nothing in these terms limits or excludes liability for death or personal injury caused by negligence, fraud, or any other liability that cannot be excluded under applicable law, including the mandatory statutory rights of consumers in the EU (Consumer Rights Directive 2011/83/EU) and the UK (Consumer Rights Act 2015).</strong> Use at your own risk.</p></div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- YOUR CONTENT -->
+    <div class="section-block section-anchor" id="your-content">
+      <div class="sec-header rev"><div class="sec-icon si-cyan"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div><div><div class="sec-sub-title">Ownership</div><h2 class="sec-title">Your Content</h2></div></div>
+      <div class="photo-card rev d1">
+        <div class="photo-card-img"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1000&q=85&auto=format&fit=crop" alt="" loading="lazy"><div class="photo-card-img-ov" style="background:linear-gradient(135deg,rgba(12,228,250,.12) 0%,transparent 50%),linear-gradient(to bottom,transparent 30%,rgba(4,6,15,.88) 100%);"></div></div>
+        <div class="photo-card-body"><div class="pctag pctag-cyan"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Full ownership retained</div><p>Because all processing is local, we never receive your files. You retain full ownership and all intellectual property rights in any content you process or create using Pixelskits. We claim no rights over your files or their outputs.</p><p>You are solely responsible for ensuring you have the necessary rights and permissions to process any files you use. Do not process files that infringe third-party intellectual property rights or constitute illegal content.</p></div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ACCEPTABLE USE -->
+    <div class="section-block section-anchor" id="acceptable">
+      <div class="sec-header rev"><div class="sec-icon si-violet"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="sec-sub-title">Rules of use</div><h2 class="sec-title">Acceptable Use</h2></div></div>
+      <div class="img-banner rev d1"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=85&auto=format&fit=crop" alt="" loading="lazy"><div class="img-banner-ov ib-violet"></div><div class="img-banner-tag ibt-violet">Community standards</div><div class="img-banner-label">Permitted and prohibited activities</div></div>
+      <div class="card rev d2"><div class="card-accent ca-violet"></div><div class="card-label">Permitted uses</div>
+        <div class="rule-list">
+          <div class="rule-item"><div class="ri ri-ok"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg></div>Processing your own images, documents, and files for personal use.</div>
+          <div class="rule-item"><div class="ri ri-ok"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg></div>Creating graphics, thumbnails, and banners for commercial projects you own or have licensed.</div>
+          <div class="rule-item"><div class="ri ri-ok"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg></div>Converting, compressing, or editing files for client work where you hold the relevant rights.</div>
+          <div class="rule-item"><div class="ri ri-ok"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg></div>Generating QR codes for lawful URLs and content.</div>
+        </div>
+      </div>
+      <div class="card rev d3"><div class="card-accent ca-rose"></div><div class="card-label">Prohibited uses</div>
+        <div class="rule-list">
+          <div class="rule-item"><div class="ri ri-no"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>Processing, generating, or distributing illegal content of any kind under applicable laws in your jurisdiction.</div>
+          <div class="rule-item"><div class="ri ri-no"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>Infringing or facilitating infringement of third-party intellectual property rights, including processing copyrighted images without authorisation.</div>
+          <div class="rule-item"><div class="ri ri-no"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>Attempting to exploit, hack, reverse-engineer, or disrupt the Pixelskits service or its infrastructure.</div>
+          <div class="rule-item"><div class="ri ri-no"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>Using Pixelskits to create content that constitutes harassment, defamation, or targeted abuse of any individual or group.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- SMART TOOLS -->
+    <div class="section-block section-anchor" id="smart-tools">
+      <div class="sec-header rev"><div class="sec-icon si-orange"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div><div class="sec-sub-title">Transparency</div><h2 class="sec-title">Smart Processing Tools</h2></div></div>
+      <div class="img-row rev d1">
+        <div class="img-cell"><img src="https://images.unsplash.com/photo-1549490349-8643362247b5?w=600&q=85&auto=format&fit=crop" alt="" loading="lazy"><div class="img-cell-ov"></div><div class="img-cell-badge icb-orange">Deterministic algorithm</div><div class="img-cell-label">Auto-Enhance · Sharpen · Denoise · Cinematic Grade</div></div>
+        <div class="img-cell"><img src="https://images.unsplash.com/photo-1614149162883-504ce4d13909?w=600&q=85&auto=format&fit=crop" alt="" loading="lazy"><div class="img-cell-ov"></div><div class="img-cell-badge icb-violet">ONNX ML model</div><div class="img-cell-label">Remove Background — genuine neural network</div></div>
+      </div>
+      <div class="card rev d2"><div class="card-accent ca-orange"></div><div class="card-body"><p>Auto-Enhance, Sharpen Filter, Denoise Filter, and Cinematic Grade use deterministic client-side algorithms — <strong>histogram normalisation</strong>, <strong>unsharp mask convolution</strong>, <strong>bilateral filtering</strong>, and <strong>tonal curve simulation</strong>. They are not machine learning models.</p><p><strong>Remove Background</strong> (in-browser mode) is the sole tool using a genuine ML model — a pre-trained ONNX segmentation model running locally via WebAssembly. No image data is sent to any server in this mode. All processing occurs entirely in your browser. Results may vary based on device performance, memory, and browser version.</p></div></div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- THIRD PARTY -->
+    <div class="section-block section-anchor" id="third-party">
+      <div class="sec-header rev"><div class="sec-icon si-cyan"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div><div class="sec-sub-title">External services</div><h2 class="sec-title">Third-Party Tools</h2></div></div>
+      <div class="img-banner rev d1"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=85&auto=format&fit=crop" alt="" loading="lazy"><div class="img-banner-ov ib-cyan"></div><div class="img-banner-tag ibt-cyan">Open source · MIT / Apache 2.0</div><div class="img-banner-label">jsPDF · PDF.js · Mammoth · JSZip · QRCode · @imgly/background-removal</div></div>
+      <div class="card rev d2"><div class="card-accent ca-cyan"></div><div class="card-body"><p>The optional <strong>remove.bg API integration</strong> in the Remove Background tool sends your image to remove.bg's servers. <strong>You must supply your own remove.bg API key</strong> — we do not provide one, cannot access it, and never store it on our servers. Use of that feature is subject to <a href="https://www.remove.bg/terms" target="_blank" rel="noopener">remove.bg's Terms of Service</a>. We are not affiliated with remove.bg.</p><p>Pixelskits uses open-source libraries (jsPDF, PDF.js, Mammoth.js, JSZip, QRCode.js, @imgly/background-removal) served from Cloudflare CDN and jsDelivr. These are governed by their respective open-source licences (MIT, Apache 2.0, BSD) as detailed in our Open Source Licenses section within the app.</p></div></div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- TRADEMARKS -->
+    <div class="section-block section-anchor" id="trademarks">
+      <div class="sec-header rev"><div class="sec-icon si-violet"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div><div><div class="sec-sub-title">No affiliation</div><h2 class="sec-title">Trademarks &amp; Platform References</h2></div></div>
+      <div class="tm-grid rev d1">
+        <div class="tm-cell"><img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=600&q=85&auto=format&fit=crop" alt="" loading="lazy"><div class="tm-cell-ov"></div><div class="tm-cell-note">Trademark of</div><div class="tm-cell-name">Google LLC</div></div>
+        <div class="tm-cell"><img src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=600&q=85&auto=format&fit=crop" alt="" loading="lazy"><div class="tm-cell-ov"></div><div class="tm-cell-note">Trademark of</div><div class="tm-cell-name">Meta Platforms Inc.</div></div>
+        <div class="tm-cell"><img src="https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=600&q=85&auto=format&fit=crop" alt="" loading="lazy"><div class="tm-cell-ov"></div><div class="tm-cell-note">Trademark of</div><div class="tm-cell-name">LinkedIn Corp.</div></div>
+        <div class="tm-cell"><img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=600&q=85&auto=format&fit=crop" alt="" loading="lazy"><div class="tm-cell-ov"></div><div class="tm-cell-note">Trademark of</div><div class="tm-cell-name">X Corp.</div></div>
+      </div>
+      <div class="card rev d2"><div class="card-accent ca-violet"></div><div class="card-body"><p>Pixelskits is an independent product by Ribon Patil — not affiliated with, endorsed by, or sponsored by any platform. Platform names are referenced solely to describe industry-standard canvas dimensions (e.g. YouTube thumbnail 1280×720px, Instagram post 1080×1080px). All trademarks belong to their respective owners.</p></div></div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- PDF LIMITATIONS -->
+    <div class="section-block section-anchor" id="pdf-limits">
+      <div class="sec-header rev"><div class="sec-icon si-orange"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 15 12 18 15 15"/></svg></div><div><div class="sec-sub-title">Known constraints</div><h2 class="sec-title">PDF Conversion Limitations</h2></div></div>
+      <div class="photo-card rev d1">
+        <div class="photo-card-img"><img src="https://images.unsplash.com/photo-1568667256549-094345857637?w=1000&q=85&auto=format&fit=crop" alt="" loading="lazy"><div class="photo-card-img-ov" style="background:linear-gradient(135deg,rgba(255,77,28,.12) 0%,transparent 50%),linear-gradient(to bottom,transparent 30%,rgba(4,6,15,.88) 100%);"></div></div>
+        <div class="photo-card-body"><div class="pctag pctag-orange"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>Conversion has inherent limits</div><p>PDF-to-Word and Word-to-PDF tools work best with simple, text-based documents. Complex multi-column layouts, embedded images, tables, footnotes, special formatting, and non-standard fonts may not convert accurately.</p><p>Always review converted documents before use. Do not rely on these tools for legally significant documents, technical specifications, or formal submissions where formatting precision is critical.</p></div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- GOVERNING LAW -->
+    <div class="section-block section-anchor" id="governing">
+      <div class="sec-header rev"><div class="sec-icon si-snow"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="sec-sub-title">Jurisdiction</div><h2 class="sec-title">Governing Law</h2></div></div>
+      <div class="contact-card rev d1">
+        <div class="contact-img"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1000&q=85&auto=format&fit=crop" alt="" loading="lazy"><div class="contact-img-ov"></div></div>
+        <div class="contact-body">
+          <div class="contact-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg></div>
+          <div class="contact-info"><h4>Ribon Patil — Legal Contact</h4><p>These terms are governed by the <strong>laws of India</strong>. However, if you are a consumer resident in the EU or UK, you also benefit from any mandatory provisions of the law of your country of residence that cannot be derogated from by contract. EU consumers may also bring proceedings in the courts of their EU country of residence (Regulation EU 1215/2012). UK consumers retain equivalent rights under UK law. Nothing in these terms removes or limits your statutory consumer rights. If any provision is found invalid or unenforceable by a court of competent jurisdiction, that provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall continue in full force and effect.</p><p style="font-size:.79rem;color:var(--snow3);margin-top:8px;"><strong>Registered office:</strong> Ribon Patil, India. Contact: <a href="/cdn-cgi/l/email-protection#7f0f16071a130c14160b0c0c3f18121e1613511c1012" class="contact-email"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg><span class="__cf_email__" data-cfemail="1e6e77667b726d75776a6d6d5e79737f7772307d7173">[email&#160;protected]</span></a></p><a href="/cdn-cgi/l/email-protection#64140d1c0108170f0d101717240309050d084a070b09" class="contact-email"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg><span class="__cf_email__" data-cfemail="74041d0c1118071f1d000707341319151d185a171b19">[email&#160;protected]</span></a></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<footer><div class="footer-inner"><div class="footer-copy">&copy; 2026 Pixelskits / Ribon Patil All rights reserved.</div><div class="footer-links-sm"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="index.html">Back to App</a></div></div></footer>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-modal="true" aria-label="Cookie consent">
+  <div class="ck-in">
+    <div class="ck-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10"/><path d="M12 8v4l3 3"/><circle cx="18.5" cy="5.5" r="2.5"/></svg></div>
+    <div class="ck-t">
+      <strong>Cookie &amp; Privacy Notice</strong>
+      <p>We use <strong>Google AdSense</strong> for advertising and optionally load <strong>Google Fonts</strong>. Both may log your IP address. Your files are always processed locally — never uploaded. <a href="privacy.html">Privacy Policy</a></p>
+    </div>
+  </div>
+  <div class="ck-btns">
+    <button class="ck-dec" onclick="consentDecline()"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Reject All</button>
+    <button class="ck-acc" onclick="consentAcceptAll()"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>Accept All</button>
+  </div>
+</div>
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+(function(){const d=document.getElementById('cd'),r=document.getElementById('cr');if(!d||!r)return;let mx=0,my=0,rx=0,ry=0;document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;d.style.transform=`translate(calc(${mx}px - 50%),calc(${my}px - 50%))`;},{passive:true});(function a(){rx+=(mx-rx)*.15;ry+=(my-ry)*.15;r.style.transform=`translate(calc(${rx}px - 50%),calc(${ry}px - 50%))`;requestAnimationFrame(a);})();document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('ch'));el.addEventListener('mouseleave',()=>document.body.classList.remove('ch'));});})();
+function setTheme(t){document.documentElement.dataset.theme=t;document.getElementById('t-sun').style.display=t==='light'?'block':'none';document.getElementById('t-moon').style.display=t==='dark'?'block':'none';try{const c=localStorage.getItem('pk-consent-v3');if(c)localStorage.setItem('pk-theme',t);}catch(e){}}
+document.getElementById('themeBtn').onclick=()=>setTheme(document.documentElement.dataset.theme==='dark'?'light':'dark');
+try{setTheme(localStorage.getItem('pk-theme')||'dark');}catch(e){setTheme('dark');}
+const FU='https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&display=swap';
+function _lf(){if(document.getElementById('gfL'))return;const p1=document.createElement('link');p1.rel='preconnect';p1.href='https://fonts.googleapis.com';document.head.appendChild(p1);const p2=document.createElement('link');p2.rel='preconnect';p2.href='https://fonts.gstatic.com';p2.crossOrigin='anonymous';document.head.appendChild(p2);const l=document.createElement('link');l.id='gfL';l.rel='stylesheet';l.href=FU;document.head.appendChild(l);}
+function _hb(){const b=document.getElementById('cookieBanner');if(b){b.style.opacity='0';b.style.transition='opacity .3s';setTimeout(()=>b.style.display='none',320);}}
+function _ckGet(){try{const v=localStorage.getItem('pk-consent-v3');return v?JSON.parse(v):null;}catch(e){return null;}}
+function _ckSet(ads,fonts){try{localStorage.setItem('pk-consent-v3',JSON.stringify({ads,fonts,ts:new Date().toISOString()}));}catch(e){}}
+function consentAcceptAll(){_ckSet(true,true);_lf();_hb();}
+function consentDecline(){_ckSet(false,false);_hb();}
+function consentAccept(){consentAcceptAll();}
+(function(){
+  const p=_ckGet();
+  if(p){if(p.fonts)_lf();document.getElementById('cookieBanner').style.display='none';return;}
+  setTimeout(()=>{const b=document.getElementById('cookieBanner');if(b)b.style.display='flex';},1500);
+  document.getElementById('cookieBanner').style.display='none';
+})();
+const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');}),{threshold:.07});
+document.querySelectorAll('.rev').forEach(el=>ro.observe(
