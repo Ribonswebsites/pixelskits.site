@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://pixelskits.site/sitemap.xml
+Disallow: /404.html
