@@ -1,0 +1,86 @@
+{
+  "name": "Pixelskits — Free Image & PDF Tools",
+  "short_name": "Pixelskits",
+  "description": "30+ free professional image and PDF tools. AI background remover, compress, convert, resize, crop, merge PDF, YouTube thumbnails, QR codes and more. No uploads. No account. 100% in your browser.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#04060F",
+  "theme_color": "#0CE4FA",
+  "categories": ["utilities", "productivity", "photo"],
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "label": "Pixelskits — Free Image and PDF Tools"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "AI Background Remover",
+      "short_name": "BG Remove",
+      "description": "Remove background from any image instantly",
+      "url": "/#tools",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Image Compressor",
+      "short_name": "Compress",
+      "description": "Compress JPEG, PNG and WebP images",
+      "url": "/#tools",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Merge PDF",
+      "short_name": "Merge PDF",
+      "description": "Combine multiple PDF files into one",
+      "url": "/#tools",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "YouTube Thumbnail Maker",
+      "short_name": "YT Thumb",
+      "description": "Create 1280x720 YouTube thumbnails",
+      "url": "/#creator",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
