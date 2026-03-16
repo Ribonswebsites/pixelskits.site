@@ -1,0 +1,20 @@
+# Pixelskits robots.txt
+# https://pixelskits.site/
+
+User-agent: *
+Allow: /
+Disallow: /cdn-cgi/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://pixelskits.site/sitemap.xml
+
+# Crawl-delay for heavy bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
